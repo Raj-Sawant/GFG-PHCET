@@ -1,0 +1,24 @@
+NAME: Ramola Lade
+ROLE: Student
+YEAR: BE
+POSITION: Head
+DOMAIN: Event & Operations
+DEPARTMENT: Computer Engineering
+
+BIO:
+Ramola is the driving force behind every GFG PHCET event. From planning and logistics to on-ground
+execution, she ensures every workshop, seminar, and hackathon runs like clockwork.
+
+SKILLS:
+- Event Planning
+- Logistics
+- Team Coordination
+- Project Management
+
+ACHIEVEMENTS:
+- Successfully executed 15+ events
+- Managed budgets for large-scale events
+- Recognized as Best Organizer
+
+LINKEDIN: https://linkedin.com/
+GITHUB: https://github.com/

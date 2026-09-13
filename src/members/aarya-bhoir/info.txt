@@ -1,0 +1,24 @@
+NAME: Aarya Bhoir
+ROLE: Student
+YEAR: TE
+POSITION: Member
+DOMAIN: Social Media & Promotion
+DEPARTMENT: Computer Engineering
+
+BIO:
+Aarya creates vibrant, engaging content for GFG PHCET's social media platforms. Her creativity
+and sense of trends keeps the club's digital presence fresh and relevant.
+
+SKILLS:
+- Content Creation
+- Instagram Reels
+- Canva Design
+- Copywriting
+
+ACHIEVEMENTS:
+- Created 50+ social media posts
+- Managed club's Instagram stories
+- Contributed to viral content campaigns
+
+LINKEDIN: https://linkedin.com/
+GITHUB: https://github.com/

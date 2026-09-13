@@ -1,0 +1,25 @@
+NAME: Shlok Sachin Pandit
+ROLE: Student
+YEAR: TE
+POSITION: Head
+DOMAIN: Public Relations & Outreach
+DEPARTMENT: Computer Engineering
+
+BIO:
+Shlok is GFG PHCET's face to the external world. He builds relationships with companies, speakers,
+and partner organisations, bringing real-world exposure and opportunities to club members.
+
+SKILLS:
+- Public Relations
+- Communication
+- Networking
+- Brand Management
+- Corporate Outreach
+
+ACHIEVEMENTS:
+- Partnered with 5+ tech companies
+- Secured 3 industry speakers for events
+- Grew club's LinkedIn following by 60%
+
+LINKEDIN: https://linkedin.com/
+GITHUB: https://github.com/

@@ -1,0 +1,25 @@
+NAME: Pramod Wamanrao Gholve
+ROLE: Student
+YEAR: TE
+POSITION: Head
+DOMAIN: Design & Creative
+DEPARTMENT: Computer Engineering
+
+BIO:
+Pramod is GFG PHCET's chief visual storyteller. He leads the Design & Creative team in producing
+stunning graphics, UI designs, and brand assets that make the club stand out.
+
+SKILLS:
+- UI/UX Design
+- Figma
+- Adobe Illustrator
+- Photoshop
+- Brand Identity
+
+ACHIEVEMENTS:
+- Designed club's official logo
+- Created 100+ design assets
+- Won Best Design at Inter-college fest
+
+LINKEDIN: https://linkedin.com/
+GITHUB: https://github.com/

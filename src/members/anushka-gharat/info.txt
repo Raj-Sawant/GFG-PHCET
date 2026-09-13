@@ -1,0 +1,24 @@
+NAME: Anushka Gharat
+ROLE: Student
+YEAR: SE
+POSITION: Member
+DOMAIN: Social Media & Promotion
+DEPARTMENT: Computer Engineering
+
+BIO:
+Anushka brings a fresh second-year perspective to the Social Media team. Her natural flair for
+storytelling and digital communication makes her a valuable creative asset for GFG PHCET.
+
+SKILLS:
+- Social Media
+- Canva
+- Storytelling
+- Photography
+
+ACHIEVEMENTS:
+- Onboarded as SE member
+- Contributed to 10+ post designs
+- Active participant in all club activities
+
+LINKEDIN: https://linkedin.com/
+GITHUB: https://github.com/

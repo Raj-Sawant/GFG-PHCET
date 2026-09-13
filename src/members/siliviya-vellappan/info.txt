@@ -1,0 +1,24 @@
+NAME: Siliviya Vellappan
+ROLE: Student
+YEAR: TE
+POSITION: Treasurer
+DOMAIN: Finance
+DEPARTMENT: Computer Engineering
+
+BIO:
+Siliviya manages GFG PHCET's finances with precision and accountability. Her careful budget planning
+ensures every event is well-funded and resources are utilised efficiently.
+
+SKILLS:
+- Financial Management
+- Budgeting
+- Accounting
+- Planning
+
+ACHIEVEMENTS:
+- Managed annual club budget of Rs 50,000+
+- Zero financial discrepancies in 2 years
+- Introduced digital expense tracking
+
+LINKEDIN: https://linkedin.com/
+GITHUB: https://github.com/

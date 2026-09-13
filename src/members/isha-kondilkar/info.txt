@@ -1,0 +1,24 @@
+NAME: Isha Kondilkar
+ROLE: Student
+YEAR: TE
+POSITION: Member
+DOMAIN: Documentation
+DEPARTMENT: Computer Engineering
+
+BIO:
+Isha's eye for detail and love for storytelling make her an exceptional documentation member. She
+transforms event experiences into compelling written records that inspire future club members.
+
+SKILLS:
+- Content Writing
+- Editorial Skills
+- Photography
+- Documentation
+
+ACHIEVEMENTS:
+- Published 20+ event summaries
+- Designed the club's annual report
+- Recognised for best written report
+
+LINKEDIN: https://linkedin.com/
+GITHUB: https://github.com/

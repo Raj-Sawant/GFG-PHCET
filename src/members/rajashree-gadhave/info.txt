@@ -1,0 +1,23 @@
+NAME: Dr. Rajashree Gadhave
+ROLE: Faculty
+POSITION: Head of Department (HoD)
+DEPARTMENT: Computer Engineering
+INSTITUTION: Pillai HOC College of Engineering & Technology (PHCET)
+
+BIO:
+Dr. Rajashree Gadhave is the Head of the Computer Engineering Department at PHCET. Her academic
+excellence and research contributions inspire the entire department to push boundaries in technology
+and innovation.
+
+SKILLS:
+- Research
+- Academic Leadership
+- AI & ML
+- Strategic Planning
+
+ACHIEVEMENTS:
+- PhD in Computer Engineering
+- 15+ research publications
+- Recipient of Best Faculty Award
+
+EMAIL: rajashree.gadhave@phcet.ac.in

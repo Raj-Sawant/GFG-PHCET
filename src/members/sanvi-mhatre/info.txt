@@ -1,0 +1,24 @@
+NAME: Sanvi Mhatre
+ROLE: Student
+YEAR: TE
+POSITION: Member
+DOMAIN: Documentation
+DEPARTMENT: Computer Engineering
+
+BIO:
+Sanvi is the keeper of GFG PHCET's institutional memory. She meticulously documents every event,
+meeting, and milestone ensuring the club's story is preserved with clarity and detail.
+
+SKILLS:
+- Technical Writing
+- Documentation
+- Content Creation
+- Research
+
+ACHIEVEMENTS:
+- Authored club activity reports
+- Maintained digital archive of 30+ events
+- Created structured templates used club-wide
+
+LINKEDIN: https://linkedin.com/
+GITHUB: https://github.com/

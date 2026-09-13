@@ -1,0 +1,23 @@
+NAME: Ms. Kashmira Dalvi
+ROLE: Faculty
+POSITION: GFG Club Coordinator (Teacher Coordinator)
+DEPARTMENT: Computer Engineering
+INSTITUTION: Pillai HOC College of Engineering & Technology (PHCET)
+
+BIO:
+Ms. Kashmira Dalvi is the driving force behind GFG PHCET. With a passion for nurturing student
+talent and bridging the gap between academics and industry, she guides the club with vision and
+dedication.
+
+SKILLS:
+- Mentorship
+- Curriculum Design
+- Event Management
+- Industry Liaison
+
+ACHIEVEMENTS:
+- Established GFG Chapter at PHCET
+- Mentored 100+ students in competitive programming
+- Organized multiple national-level tech events
+
+EMAIL: kashmira.dalvi@phcet.ac.in

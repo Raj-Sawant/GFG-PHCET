@@ -1,0 +1,25 @@
+NAME: Vedant Patil
+ROLE: Student
+YEAR: TE
+POSITION: Member
+DOMAIN: Design & Creative
+DEPARTMENT: Computer Engineering
+
+BIO:
+Vedant channels his artistic passion into every design he creates for GFG PHCET. His work ranges
+from event posters to digital illustrations, always with a modern and polished aesthetic.
+
+SKILLS:
+- Graphic Design
+- Canva
+- Figma
+- Illustration
+- Typography
+
+ACHIEVEMENTS:
+- Designed posters for 10+ events
+- Created social media templates
+- Contributed to club brand guidelines
+
+LINKEDIN: https://linkedin.com/
+GITHUB: https://github.com/

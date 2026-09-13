@@ -1,0 +1,27 @@
+NAME: Raj Sawant
+ROLE: Student
+YEAR: TE
+POSITION: Head
+DOMAIN: Technical
+DEPARTMENT: Computer Engineering
+
+BIO:
+Raj leads the Technical domain of GFG PHCET with a sharp focus on competitive programming,
+system design, and open-source development. He mentors members through workshops and hands-on
+coding sessions.
+
+SKILLS:
+- Competitive Programming
+- System Design
+- React
+- Node.js
+- DSA
+- Open Source
+
+ACHIEVEMENTS:
+- Solved 500+ LeetCode problems
+- Contributed to open-source projects
+- Conducted 5+ technical workshops
+
+LINKEDIN: https://linkedin.com/
+GITHUB: https://github.com/

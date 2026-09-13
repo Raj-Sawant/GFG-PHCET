@@ -1,0 +1,25 @@
+NAME: Vaishvani Ravindra Sutar
+ROLE: Student
+YEAR: TE
+POSITION: Member
+DOMAIN: Technical
+DEPARTMENT: Computer Engineering
+
+BIO:
+Vaishvani is a passionate coder and technical enthusiast who actively contributes to GFG PHCET's
+workshops and coding sessions, helping peers sharpen their DSA and development skills.
+
+SKILLS:
+- DSA
+- C++
+- Python
+- Web Development
+- Problem Solving
+
+ACHIEVEMENTS:
+- Solved 300+ DSA problems
+- Conducted Python workshop for juniors
+- Contributor to club's open-source repo
+
+LINKEDIN: https://linkedin.com/
+GITHUB: https://github.com/

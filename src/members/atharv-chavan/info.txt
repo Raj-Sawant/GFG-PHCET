@@ -1,0 +1,24 @@
+NAME: Atharv Naresh Chavan
+ROLE: Student
+YEAR: TE
+POSITION: Member
+DOMAIN: Event & Operations
+DEPARTMENT: Computer Engineering
+
+BIO:
+Atharv is a passionate member of the Events & Operations team who brings creative energy and
+meticulous attention to detail to every GFG event he helps organize.
+
+SKILLS:
+- Event Coordination
+- Creative Ideation
+- Communication
+- Team Collaboration
+
+ACHIEVEMENTS:
+- Contributed to 8+ events
+- Managed on-ground volunteer teams
+- Received appreciation from club leadership
+
+LINKEDIN: https://linkedin.com/
+GITHUB: https://github.com/

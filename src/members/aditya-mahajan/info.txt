@@ -1,0 +1,25 @@
+NAME: Aditya Mahajan
+ROLE: Student
+YEAR: BE
+POSITION: Team Lead
+DOMAIN: Leadership
+DEPARTMENT: Computer Engineering
+
+BIO:
+Aditya is the backbone of GFG PHCET's student operations. As Team Lead in BE, he coordinates
+across all domains, ensures seamless communication, and drives the club's strategic vision forward.
+
+SKILLS:
+- Team Management
+- Strategic Planning
+- Public Speaking
+- DSA
+- Leadership
+
+ACHIEVEMENTS:
+- Led 10+ successful club events
+- Ranked in top 5% on GeeksforGeeks
+- Organized Hackathon with 200+ participants
+
+LINKEDIN: https://linkedin.com/
+GITHUB: https://github.com/

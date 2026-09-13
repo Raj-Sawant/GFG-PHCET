@@ -1,0 +1,24 @@
+NAME: Aarya Mahesh Patil
+ROLE: Student
+YEAR: TE
+POSITION: Member
+DOMAIN: Social Media & Promotion
+DEPARTMENT: Computer Engineering
+
+BIO:
+Aarya Mahesh Patil is a creative team player who contributes to GFG PHCET's online presence
+through thoughtful content and consistent engagement across social platforms.
+
+SKILLS:
+- Content Creation
+- Social Media
+- Video Editing
+- Audience Engagement
+
+ACHIEVEMENTS:
+- Produced 15+ promotional videos
+- Helped plan content calendar
+- Active in event promotion campaigns
+
+LINKEDIN: https://linkedin.com/
+GITHUB: https://github.com/

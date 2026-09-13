@@ -1,0 +1,26 @@
+NAME: Sharwari Shinde
+ROLE: Student
+YEAR: TE
+POSITION: Head (Campus Mantri)
+DOMAIN: Campus Mantri
+DEPARTMENT: Computer Engineering
+
+BIO:
+Sharwari is the Campus Mantri Head, serving as the primary liaison between GFG and the PHCET
+campus community. Her networking skills and campus-wide presence make her the go-to person for
+club outreach.
+
+SKILLS:
+- Community Outreach
+- Networking
+- Campus Relations
+- Coordination
+- Communication
+
+ACHIEVEMENTS:
+- Grew campus GFG reach by 40%
+- Organized campus-wide coding challenges
+- Featured in college newsletter
+
+LINKEDIN: https://linkedin.com/
+GITHUB: https://github.com/

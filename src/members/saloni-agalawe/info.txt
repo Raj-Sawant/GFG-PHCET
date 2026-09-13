@@ -1,0 +1,24 @@
+NAME: Saloni Agalawe
+ROLE: Student
+YEAR: TE
+POSITION: Member
+DOMAIN: Event & Operations
+DEPARTMENT: Computer Engineering
+
+BIO:
+Saloni brings infectious enthusiasm to the Events & Operations team. She specialises in audience
+engagement and making every GFG PHCET gathering memorable and well-attended.
+
+SKILLS:
+- Event Marketing
+- Audience Engagement
+- Coordination
+- Social Media
+
+ACHIEVEMENTS:
+- Boosted event attendance by 30%
+- Created event promotional content
+- Key contributor to Tech Fest 2025
+
+LINKEDIN: https://linkedin.com/
+GITHUB: https://github.com/

@@ -1,0 +1,25 @@
+NAME: Tejas Patil
+ROLE: Student
+YEAR: BE
+POSITION: Head
+DOMAIN: Social Media & Promotion
+DEPARTMENT: Computer Engineering
+
+BIO:
+Tejas heads GFG PHCET's digital presence with a creative vision and data-driven approach. Under
+his leadership, the club's social channels have seen explosive growth and community engagement.
+
+SKILLS:
+- Social Media Strategy
+- Content Marketing
+- Analytics
+- Graphic Design
+- Video Editing
+
+ACHIEVEMENTS:
+- Grew Instagram to 1000+ followers
+- Viral reel with 50K+ views
+- Created club brand identity
+
+LINKEDIN: https://linkedin.com/
+GITHUB: https://github.com/

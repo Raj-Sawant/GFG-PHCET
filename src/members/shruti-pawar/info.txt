@@ -1,0 +1,25 @@
+NAME: Shruti Pawar
+ROLE: Student
+YEAR: TE
+POSITION: Member
+DOMAIN: Design & Creative
+DEPARTMENT: Computer Engineering
+
+BIO:
+Shruti's creative eye and passion for visual design make her a key contributor to GFG PHCET's
+Design team. She brings fresh ideas and executes them with elegance and precision.
+
+SKILLS:
+- UI Design
+- Canva
+- Color Theory
+- Visual Storytelling
+- Branding
+
+ACHIEVEMENTS:
+- Led redesign of club's digital assets
+- Created animated social media posts
+- Recognized for best design contribution
+
+LINKEDIN: https://linkedin.com/
+GITHUB: https://github.com/

@@ -1,0 +1,24 @@
+NAME: Sanskar Anil Panchal
+ROLE: Student
+YEAR: TE
+POSITION: Member
+DOMAIN: Public Relations & Outreach
+DEPARTMENT: Computer Engineering
+
+BIO:
+Sanskar supports the PR & Outreach team with fresh perspectives and proactive communication,
+helping GFG PHCET build a stronger brand presence both on and off campus.
+
+SKILLS:
+- PR Strategy
+- Communication
+- Email Outreach
+- Networking
+
+ACHIEVEMENTS:
+- Assisted in 3 corporate tie-ups
+- Managed sponsor communications
+- Created PR strategy document
+
+LINKEDIN: https://linkedin.com/
+GITHUB: https://github.com/
