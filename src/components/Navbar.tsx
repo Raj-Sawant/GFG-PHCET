@@ -23,7 +23,7 @@ export default function Navbar() {
             className={({ isActive }) => `nav-link${isActive ? ' active' : ''}`}
           >
             <Users size={15} />
-            <span>All Members</span>
+            <span>Members</span>
           </NavLink>
         </div>
       </nav>

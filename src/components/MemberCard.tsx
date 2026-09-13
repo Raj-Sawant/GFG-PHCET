@@ -41,60 +41,62 @@ export default function MemberCard({ member }: Props) {
 
         {/* Social Handles, Email, QR Scan, and View Profile */}
         <div className="member-card-handles">
-          {member.linkedin && (
+          <div className="card-social-group">
+            {member.linkedin && (
+              <a
+                href={member.linkedin}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="handle-btn linkedin"
+                title="LinkedIn"
+              >
+                <LinkedInIcon size={14} />
+              </a>
+            )}
+            {member.github && (
+              <a
+                href={member.github}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="handle-btn github"
+                title="GitHub"
+              >
+                <GithubIcon size={14} />
+              </a>
+            )}
+            {member.instagram && (
+              <a
+                href={member.instagram}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="handle-btn instagram"
+                title="Instagram"
+              >
+                <InstagramIcon size={14} />
+              </a>
+            )}
             <a
-              href={member.linkedin}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="handle-btn linkedin"
-              title="LinkedIn"
+              href={`mailto:${emailAddress}`}
+              className="handle-btn email"
+              title={`Email ${member.name} (${emailAddress})`}
             >
-              <LinkedInIcon size={14} />
+              <MailIcon size={14} />
             </a>
-          )}
-          {member.github && (
-            <a
-              href={member.github}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="handle-btn github"
-              title="GitHub"
-            >
-              <GithubIcon size={14} />
-            </a>
-          )}
-          {member.instagram && (
-            <a
-              href={member.instagram}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="handle-btn instagram"
-              title="Instagram"
-            >
-              <InstagramIcon size={14} />
-            </a>
-          )}
-          <a
-            href={`mailto:${emailAddress}`}
-            className="handle-btn email"
-            title={`Email ${member.name} (${emailAddress})`}
-          >
-            <MailIcon size={14} />
-          </a>
 
-          {/* QR Button on every card to scan and jump directly to member's page */}
-          <button
-            type="button"
-            onClick={(e) => {
-              e.preventDefault();
-              e.stopPropagation();
-              setIsQrOpen(true);
-            }}
-            className="handle-btn qr"
-            title={`Scan QR Code for ${member.name}`}
-          >
-            <QrIcon size={14} />
-          </button>
+            {/* QR Button on every card to scan and jump directly to member's page */}
+            <button
+              type="button"
+              onClick={(e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                setIsQrOpen(true);
+              }}
+              className="handle-btn qr"
+              title={`Scan QR Code for ${member.name}`}
+            >
+              <QrIcon size={14} />
+            </button>
+          </div>
 
           <Link to={`/member/${member.slug}`} className="card-view-btn" title="View Profile">
             <span>Profile</span>

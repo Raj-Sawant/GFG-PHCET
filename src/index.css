@@ -78,8 +78,8 @@ button {
   right: 0;
   z-index: 1000;
   background: #000000 !important;
-  border-bottom: none;
-  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(14px);
 }
 
 .navbar {
@@ -88,13 +88,14 @@ button {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1rem 1.5rem;
+  padding: 0.85rem 1.5rem;
 }
 
 .navbar-brand {
   display: inline-flex;
   align-items: center;
   text-decoration: none;
+  flex-shrink: 0;
 }
 
 /* Bigger GFG PHCET text with no border */
@@ -102,14 +103,15 @@ button {
   display: inline-block;
   font-family: 'Space Grotesk', sans-serif;
   font-weight: 900;
-  font-size: 1.65rem;
-  letter-spacing: 0.08em;
+  font-size: 1.5rem;
+  letter-spacing: 0.06em;
   color: #00b386;
   background: transparent;
   border: none;
   text-transform: uppercase;
   text-shadow: 0 0 20px rgba(0, 179, 134, 0.45);
   transition: var(--transition-smooth);
+  white-space: nowrap;
 }
 
 .navbar-brand-text:hover {
@@ -120,19 +122,21 @@ button {
 .nav-links {
   display: flex;
   align-items: center;
-  gap: 1.25rem;
+  gap: 0.75rem;
+  flex-shrink: 0;
 }
 
 .nav-link {
   display: inline-flex;
   align-items: center;
-  gap: 0.45rem;
-  font-size: 0.88rem;
+  gap: 0.4rem;
+  font-size: 0.84rem;
   font-weight: 600;
   color: #94a3b8;
-  padding: 0.45rem 0.9rem;
+  padding: 0.42rem 0.85rem;
   border-radius: var(--radius-sm);
   transition: var(--transition-smooth);
+  white-space: nowrap;
 }
 
 .nav-link:hover {
@@ -143,7 +147,7 @@ button {
 .nav-link.active {
   color: #ffffff;
   background: rgba(0, 179, 134, 0.15);
-  border: 1px solid rgba(0, 179, 134, 0.3);
+  border: 1px solid rgba(0, 179, 134, 0.35);
 }
 
 /* ──────────────────────────────────────────────
@@ -600,13 +604,21 @@ button {
   flex-grow: 1;
 }
 
-/* Distinct Style Handle Buttons (clean card view without QR) */
+/* Distinct Style Handle Buttons (clean card view with QR) */
 .member-card-handles {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   gap: 0.5rem;
   padding-top: 0.75rem;
   border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.card-social-group {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  flex-wrap: nowrap;
 }
 
 .handle-btn {
@@ -620,6 +632,7 @@ button {
   border: 1px solid rgba(255, 255, 255, 0.08);
   color: #94a3b8;
   transition: var(--transition-smooth);
+  flex-shrink: 0;
 }
 
 .handle-btn:hover {
@@ -1157,4 +1170,380 @@ button {
   text-align: center;
   color: var(--text-muted);
   font-size: 0.86rem;
+}
+
+/* ──────────────────────────────────────────────
+   Comprehensive Mobile & Phone Responsiveness
+   (Ensures 100% Symmetry, Perfect Navbar, & No Overflow)
+────────────────────────────────────────────── */
+
+@media (max-width: 768px) {
+  /* Prevent any horizontal scroll */
+  html, body {
+    overflow-x: hidden;
+    max-width: 100vw;
+  }
+
+  /* Navbar */
+  .navbar {
+    padding: 0.75rem 1rem;
+  }
+
+  .navbar-brand-text {
+    font-size: 1.25rem;
+    letter-spacing: 0.04em;
+  }
+
+  .nav-links {
+    gap: 0.4rem;
+  }
+
+  .nav-link {
+    font-size: 0.78rem;
+    padding: 0.35rem 0.6rem;
+    gap: 0.3rem;
+  }
+
+  /* Section Padding */
+  .section {
+    padding: 2.5rem 1rem;
+  }
+
+  .section-header {
+    margin-bottom: 2rem;
+  }
+
+  .section-title {
+    font-size: clamp(1.6rem, 5.5vw, 2.2rem);
+  }
+
+  .section-desc {
+    font-size: 0.88rem;
+    line-height: 1.5;
+  }
+
+  /* Hero Section */
+  .hero {
+    padding-top: 5.5rem;
+    padding-bottom: 2.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .hero-grid {
+    gap: 2rem;
+  }
+
+  .hero-title {
+    font-size: clamp(1.9rem, 6.5vw, 2.5rem);
+    text-align: center;
+    line-height: 1.15;
+  }
+
+  .hero-subtitle {
+    font-size: 0.92rem;
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+
+  .hero-actions {
+    display: flex;
+    justify-content: center;
+    gap: 0.65rem;
+    width: 100%;
+  }
+
+  .hero-actions .btn-primary,
+  .hero-actions .btn-secondary {
+    flex: 1;
+    max-width: 175px;
+    padding: 0.65rem 0.85rem;
+    font-size: 0.82rem;
+    justify-content: center;
+  }
+
+  /* Hero Stats Grid (Symmetric 3 columns on phone) */
+  .stats-strip {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    text-align: center;
+    gap: 0.5rem;
+    padding-top: 1.25rem;
+    width: 100%;
+  }
+
+  .stat-metric {
+    font-size: 1.35rem;
+  }
+
+  .stat-label {
+    font-size: 0.68rem;
+    letter-spacing: 0.03em;
+  }
+
+  /* Hero Orbit Ring - Scaled proportionally with zero horizontal overflow */
+  .hero-emblem-wrapper {
+    width: min(300px, 86vw);
+    height: min(300px, 86vw);
+    max-width: 300px;
+    margin: 1rem auto 0 auto;
+  }
+
+  .orbit-outer {
+    width: min(290px, 82vw);
+    height: min(290px, 82vw);
+  }
+
+  .orbit-inner {
+    width: min(230px, 65vw);
+    height: min(230px, 65vw);
+  }
+
+  .hero-emblem-circle {
+    width: min(180px, 50vw);
+    height: min(180px, 50vw);
+    border-width: 3px;
+  }
+
+  .hero-emblem-circle img {
+    width: 78%;
+    height: 78%;
+    object-fit: contain;
+  }
+
+  .sat-dot-1 {
+    width: 10px;
+    height: 10px;
+  }
+
+  .sat-dot-2 {
+    width: 9px;
+    height: 9px;
+  }
+
+  .sat-badge-1,
+  .sat-badge-2 {
+    font-size: 0.62rem;
+    padding: 0.18rem 0.45rem;
+  }
+
+  /* Filter Chips Container */
+  .filter-container {
+    gap: 0.4rem;
+    margin-bottom: 1.75rem;
+  }
+
+  .filter-chip {
+    font-size: 0.78rem;
+    padding: 0.38rem 0.75rem;
+  }
+
+  /* Member Cards Grid */
+  .team-grid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+    max-width: 440px;
+    margin: 0 auto;
+  }
+
+  .member-card {
+    border-radius: 16px;
+  }
+
+  .member-card-photo-box {
+    height: 280px;
+  }
+
+  .member-card-content {
+    padding: 1.15rem;
+  }
+
+  .member-card-name {
+    font-size: 1.15rem;
+  }
+
+  .member-card-role {
+    font-size: 0.8rem;
+  }
+
+  .member-card-bio {
+    font-size: 0.84rem;
+    margin-bottom: 0.9rem;
+  }
+
+  .member-card-handles {
+    gap: 0.35rem;
+    padding-top: 0.65rem;
+  }
+
+  .card-social-group {
+    gap: 0.3rem;
+  }
+
+  .handle-btn {
+    width: 32px;
+    height: 32px;
+  }
+
+  .card-view-btn {
+    padding: 0.35rem 0.65rem;
+    font-size: 0.75rem;
+    border-radius: 6px;
+    background: rgba(0, 179, 134, 0.12);
+    border: 1px solid rgba(0, 179, 134, 0.3);
+  }
+
+  /* Member Profile Page */
+  .profile-wrapper {
+    padding: 5.25rem 1rem 3rem 1rem;
+  }
+
+  .profile-top-bar {
+    margin-bottom: 1.25rem;
+  }
+
+  .profile-top-bar .btn-secondary {
+    padding: 0.4rem 0.75rem !important;
+    font-size: 0.78rem !important;
+  }
+
+  .profile-card-container {
+    padding: 1.25rem 1rem;
+    border-radius: 18px;
+    gap: 1.5rem;
+  }
+
+  .profile-left-header {
+    text-align: center;
+    align-items: center;
+  }
+
+  .profile-domain-pill {
+    margin: 0 auto;
+    font-size: 0.74rem;
+    padding: 0.25rem 0.65rem;
+  }
+
+  .profile-member-name {
+    font-size: 1.55rem;
+    text-align: center;
+  }
+
+  .profile-member-position {
+    font-size: 0.88rem;
+    text-align: center;
+  }
+
+  .profile-photo-stage {
+    min-height: 260px;
+    max-height: 340px;
+    padding: 6px;
+  }
+
+  .profile-right-column {
+    gap: 1.15rem;
+  }
+
+  .profile-bio-box,
+  .profile-details-section {
+    padding: 1rem 1.1rem;
+    border-radius: 12px;
+  }
+
+  .profile-member-bio {
+    font-size: 0.88rem;
+  }
+
+  .profile-big-links-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.5rem;
+  }
+
+  .big-link-btn {
+    padding: 0.65rem 0.85rem;
+    font-size: 0.82rem;
+    gap: 0.5rem;
+  }
+
+  .profile-meta-row {
+    font-size: 0.82rem;
+    gap: 0.5rem;
+  }
+
+  .profile-meta-label,
+  .profile-meta-val {
+    font-size: 0.82rem;
+  }
+
+  .profile-outside-action {
+    margin-top: 1.75rem;
+  }
+
+  .profile-qr-outside-btn {
+    width: 100%;
+    max-width: 320px;
+    padding: 0.8rem 1.25rem;
+    font-size: 0.88rem;
+    justify-content: center;
+  }
+
+  /* QR Code Modal for Phone */
+  .qr-modal-backdrop {
+    padding: 0.75rem;
+  }
+
+  .qr-modal-container {
+    padding: 1.5rem 1.1rem;
+    border-radius: 18px;
+    max-width: 340px;
+  }
+
+  .qr-code-box {
+    min-width: 200px;
+    min-height: 200px;
+    padding: 0.75rem;
+  }
+
+  .qr-code-image,
+  .qr-code-box canvas {
+    width: 200px !important;
+    height: 200px !important;
+  }
+
+  .qr-actions-row {
+    gap: 0.35rem;
+  }
+
+  .qr-action-btn {
+    padding: 0.5rem 0.5rem;
+    font-size: 0.78rem;
+    gap: 0.25rem;
+  }
+
+  /* Footer */
+  .footer {
+    padding: 2rem 1rem;
+    font-size: 0.82rem;
+  }
+}
+
+@media (max-width: 375px) {
+  .navbar-brand-text {
+    font-size: 1.1rem;
+  }
+
+  .profile-big-links-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-actions .btn-primary,
+  .hero-actions .btn-secondary {
+    max-width: 100%;
+    flex: 1 1 100%;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    align-items: center;
+  }
 }
