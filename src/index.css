@@ -653,6 +653,21 @@ button {
   color: #00b386;
 }
 
+.handle-btn.qr {
+  color: #38ef7d;
+  background: rgba(0, 179, 134, 0.08);
+  border-color: rgba(0, 179, 134, 0.25);
+  cursor: pointer;
+}
+
+.handle-btn.qr:hover {
+  background: rgba(0, 179, 134, 0.28);
+  border-color: #00b386;
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 0 12px rgba(0, 179, 134, 0.4);
+}
+
 .card-view-btn {
   margin-left: auto;
   font-size: 0.78rem;

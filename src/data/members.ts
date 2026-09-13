@@ -597,7 +597,11 @@ export const members: Member[] = [
 
 export const getFacultyMembers = () => members.filter(m => m.role === 'faculty');
 export const getStudentMembers = () => members.filter(m => m.role === 'student');
-export const getMemberBySlug = (slug: string) => members.find(m => m.slug === slug);
+export const getMemberBySlug = (slug: string) => {
+  if (!slug) return undefined;
+  const clean = slug.toLowerCase().trim().replace(/\/+$/, '');
+  return members.find(m => m.slug.toLowerCase() === clean);
+};
 
 // On Landing Page: ONLY display HoD, Teacher Incharge, and Campus Mantri
 export const getLandingPageMembers = () => members.filter(m =>

@@ -6,16 +6,17 @@ import MemberProfileLayout from '../components/MemberProfileLayout';
 export default function MemberProfile() {
   const { slug } = useParams<{ slug: string }>();
 
-  if (!slug) return <Navigate to="/team" replace />;
+  const normalizedSlug = slug ? slug.toLowerCase().trim().replace(/\/+$/, '') : '';
+  if (!normalizedSlug) return <Navigate to="/team" replace />;
 
   // 1. Render dedicated standalone member component from registry if present
-  const DedicatedMemberPage = memberPages[slug];
+  const DedicatedMemberPage = memberPages[normalizedSlug];
   if (DedicatedMemberPage) {
     return <DedicatedMemberPage />;
   }
 
   // 2. Fallback to dynamic data lookup
-  const member = getMemberBySlug(slug);
+  const member = getMemberBySlug(normalizedSlug);
   if (!member) return <Navigate to="/team" replace />;
 
   const currentIndex = members.findIndex((m) => m.slug === member.slug);

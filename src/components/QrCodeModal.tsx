@@ -16,7 +16,15 @@ export default function QrCodeModal({ isOpen, onClose, member }: Props) {
   const [loading, setLoading] = useState(true);
 
   const profileUrl = typeof window !== 'undefined'
-    ? `${window.location.origin}/member/${member.slug}`
+    ? (() => {
+        const origin = window.location.origin;
+        const pathname = window.location.pathname;
+        const segments = pathname.split('/').filter(Boolean);
+        const repoPrefix = segments.length > 0 && segments[0].toLowerCase() === 'gfg-phcet'
+          ? `/${segments[0]}`
+          : '';
+        return `${origin}${repoPrefix}/member/${member.slug}`;
+      })()
     : `https://gfg-phcet.vercel.app/member/${member.slug}`;
 
   useEffect(() => {
