@@ -30,7 +30,7 @@ export default function MemberProfileLayout({
     setIsLoading(true);
     const timer = setTimeout(() => {
       setIsLoading(false);
-    }, 1200);
+    }, 800);
     return () => clearTimeout(timer);
   }, [member.slug]);
 
