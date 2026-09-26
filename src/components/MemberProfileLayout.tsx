@@ -64,17 +64,10 @@ export default function MemberProfileLayout({
   if (isLoading) {
     return (
       <main className="profile-wrapper profile-loader-wrapper">
-        <div className="profile-dots-loader-container">
-          <div className="profile-dots-glow" />
-          <div className="profile-3dots">
-            <span className="dot dot-1" />
-            <span className="dot dot-2" />
-            <span className="dot dot-3" />
-          </div>
-          <div className="profile-loader-badge">
-            <span className="live-pulse" />
-            <span>ACCESSING MEMBER DOSSIER</span>
-          </div>
+        <div className="minimal-3dots-loader">
+          <span className="dot dot-1" />
+          <span className="dot dot-2" />
+          <span className="dot dot-3" />
         </div>
       </main>
     );
