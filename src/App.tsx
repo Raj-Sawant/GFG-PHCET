@@ -1,10 +1,12 @@
 import { useEffect } from 'react';
 import { BrowserRouter, Routes, Route, useNavigate, useLocation, Navigate } from 'react-router-dom';
 import Navbar from './components/Navbar';
-import Footer from './components/Footer';
+
 import Home from './pages/Home';
 import TeamPage from './pages/TeamPage';
 import MemberProfile from './pages/MemberProfile';
+import IntroAnimation from './components/IntroAnimation';
+import BackgroundMotion from './components/BackgroundMotion';
 import './index.css';
 
 // Handler for query parameter redirects (e.g. ?p=/member/slug or ?member=slug)
@@ -37,7 +39,9 @@ function RedirectHandler() {
 function App() {
   return (
     <BrowserRouter>
+      <BackgroundMotion />
       <RedirectHandler />
+      <IntroAnimation />
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
@@ -52,7 +56,7 @@ function App() {
         {/* Wildcard fallback to home */}
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
-      <Footer />
+
     </BrowserRouter>
   );
 }

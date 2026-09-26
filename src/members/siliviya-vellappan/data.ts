@@ -26,6 +26,7 @@ export const memberData: Member = {
   "github": "https://github.com/",
   "instagram": "https://instagram.com/gfg_phcet",
   "avatar": "/assets/members/siliviya-vellappan.png",
+  "idCardImage": "/assets/id-cards/siliviya-vellappan.png",
   "coverColor": "#f1c40f"
 };
 export default memberData;

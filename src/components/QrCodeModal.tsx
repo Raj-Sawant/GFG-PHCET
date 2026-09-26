@@ -135,18 +135,8 @@ export default function QrCodeModal({ isOpen, onClose, member }: Props) {
         </button>
 
         {/* Header */}
-        <div className="qr-modal-header">
-          <div className="qr-avatar-badge">
-            <img
-              src={member.avatar}
-              alt={member.name}
-              onError={(e) => {
-                (e.target as HTMLImageElement).src =
-                  `https://ui-avatars.com/api/?name=${encodeURIComponent(member.name)}&background=00b386&color=fff&size=100`;
-              }}
-            />
-          </div>
-          <div style={{ textAlign: 'left' }}>
+        <div className="qr-modal-header" style={{ justifyContent: 'center', textAlign: 'center' }}>
+          <div style={{ textAlign: 'center' }}>
             <h3 className="qr-modal-title">{member.name}</h3>
             <p className="qr-modal-subtitle">{member.position} • {member.domain}</p>
           </div>

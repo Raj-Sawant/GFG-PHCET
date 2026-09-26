@@ -87,6 +87,7 @@ export const members: Member[] = [
     "github": "https://github.com/",
     "instagram": "https://instagram.com/gfg_phcet",
     "avatar": "/assets/members/aditya-mahajan.png",
+    "idCardImage": "/assets/id-cards/aditya-mahajan.png",
     "coverColor": "#2ecc71"
   },
   {
@@ -115,6 +116,7 @@ export const members: Member[] = [
     "github": "https://github.com/",
     "instagram": "https://instagram.com/gfg_phcet",
     "avatar": "/assets/members/sharwari-shinde.png",
+    "idCardImage": "/assets/id-cards/sharwari-shinde.png",
     "coverColor": "#00b386"
   },
   {
@@ -143,6 +145,7 @@ export const members: Member[] = [
     "github": "https://github.com/",
     "instagram": "https://instagram.com/gfg_phcet",
     "avatar": "/assets/members/raj-sawant.png",
+    "idCardImage": "/assets/id-cards/raj-sawant.png",
     "coverColor": "#27ae60"
   },
   {
@@ -171,6 +174,7 @@ export const members: Member[] = [
     "github": "https://github.com/",
     "instagram": "https://instagram.com/gfg_phcet",
     "avatar": "/assets/members/pramod-gholve.png",
+    "idCardImage": "/assets/id-cards/pramod-gholve.png",
     "coverColor": "#27ae60"
   },
   {
@@ -199,6 +203,7 @@ export const members: Member[] = [
     "github": "https://github.com/",
     "instagram": "https://instagram.com/gfg_phcet",
     "avatar": "/assets/members/ramola-lade.png",
+    "idCardImage": "/assets/id-cards/ramola-lade.png",
     "coverColor": "#e67e22"
   },
   {
@@ -227,6 +232,7 @@ export const members: Member[] = [
     "github": "https://github.com/",
     "instagram": "https://instagram.com/gfg_phcet",
     "avatar": "/assets/members/shlok-pandit.png",
+    "idCardImage": "/assets/id-cards/shlok-pandit.png",
     "coverColor": "#3498db"
   },
   {
@@ -255,6 +261,7 @@ export const members: Member[] = [
     "github": "https://github.com/",
     "instagram": "https://instagram.com/gfg_phcet",
     "avatar": "/assets/members/tejas-patil.png",
+    "idCardImage": "/assets/id-cards/tejas-patil.png",
     "coverColor": "#1abc9c"
   },
   {
@@ -283,6 +290,7 @@ export const members: Member[] = [
     "github": "https://github.com/",
     "instagram": "https://instagram.com/gfg_phcet",
     "avatar": "/assets/members/siliviya-vellappan.png",
+    "idCardImage": "/assets/id-cards/siliviya-vellappan.png",
     "coverColor": "#f1c40f"
   },
   {
@@ -311,6 +319,7 @@ export const members: Member[] = [
     "github": "https://github.com/",
     "instagram": "https://instagram.com/gfg_phcet",
     "avatar": "/assets/members/vaishvani-sutar.png",
+    "idCardImage": "/assets/id-cards/vaishvani-sutar.png",
     "coverColor": "#27ae60"
   },
   {
@@ -339,6 +348,7 @@ export const members: Member[] = [
     "github": "https://github.com/",
     "instagram": "https://instagram.com/gfg_phcet",
     "avatar": "/assets/members/sanvi-mhatre.png",
+    "idCardImage": "/assets/id-cards/sanvi-mhatre.png",
     "coverColor": "#9b59b6"
   },
   {
@@ -367,6 +377,7 @@ export const members: Member[] = [
     "github": "https://github.com/",
     "instagram": "https://instagram.com/gfg_phcet",
     "avatar": "/assets/members/isha-kondilkar.png",
+    "idCardImage": "/assets/id-cards/isha-kondilkar.png",
     "coverColor": "#8e44ad"
   },
   {
@@ -395,6 +406,7 @@ export const members: Member[] = [
     "github": "https://github.com/",
     "instagram": "https://instagram.com/gfg_phcet",
     "avatar": "/assets/members/sanskar-panchal.png",
+    "idCardImage": "/assets/id-cards/sanskar-panchal.png",
     "coverColor": "#2980b9"
   },
   {
@@ -423,6 +435,7 @@ export const members: Member[] = [
     "github": "https://github.com/",
     "instagram": "https://instagram.com/gfg_phcet",
     "avatar": "/assets/members/aarya-bhoir.png",
+    "idCardImage": "/assets/id-cards/aarya-bhoir.png",
     "coverColor": "#16a085"
   },
   {
@@ -451,6 +464,7 @@ export const members: Member[] = [
     "github": "https://github.com/",
     "instagram": "https://instagram.com/gfg_phcet",
     "avatar": "/assets/members/anushka-gharat.png",
+    "idCardImage": "/assets/id-cards/anushka-gharat.png",
     "coverColor": "#2ecc71"
   },
   {
@@ -479,6 +493,7 @@ export const members: Member[] = [
     "github": "https://github.com/",
     "instagram": "https://instagram.com/gfg_phcet",
     "avatar": "/assets/members/aarya-mahesh-patil.png",
+    "idCardImage": "/assets/id-cards/aarya-mahesh-patil.png",
     "coverColor": "#00b386"
   },
   {
@@ -507,6 +522,7 @@ export const members: Member[] = [
     "github": "https://github.com/",
     "instagram": "https://instagram.com/gfg_phcet",
     "avatar": "/assets/members/vedant-patil.png",
+    "idCardImage": "/assets/id-cards/vedant-patil.png",
     "coverColor": "#1abc9c"
   },
   {
@@ -535,6 +551,7 @@ export const members: Member[] = [
     "github": "https://github.com/",
     "instagram": "https://instagram.com/gfg_phcet",
     "avatar": "/assets/members/shruti-pawar.png",
+    "idCardImage": "/assets/id-cards/shruti-pawar.png",
     "coverColor": "#16a085"
   },
   {
@@ -563,6 +580,7 @@ export const members: Member[] = [
     "github": "https://github.com/",
     "instagram": "https://instagram.com/gfg_phcet",
     "avatar": "/assets/members/atharv-chavan.png",
+    "idCardImage": "/assets/id-cards/atharv-chavan.png",
     "coverColor": "#f39c12"
   },
   {
@@ -591,17 +609,14 @@ export const members: Member[] = [
     "github": "https://github.com/",
     "instagram": "https://instagram.com/gfg_phcet",
     "avatar": "/assets/members/saloni-agalawe.png",
+    "idCardImage": "/assets/id-cards/saloni-agalawe.png",
     "coverColor": "#e74c3c"
   }
 ];
 
 export const getFacultyMembers = () => members.filter(m => m.role === 'faculty');
 export const getStudentMembers = () => members.filter(m => m.role === 'student');
-export const getMemberBySlug = (slug: string) => {
-  if (!slug) return undefined;
-  const clean = slug.toLowerCase().trim().replace(/\/+$/, '');
-  return members.find(m => m.slug.toLowerCase() === clean);
-};
+export const getMemberBySlug = (slug: string) => members.find(m => m.slug === slug);
 
 // On Landing Page: ONLY display HoD, Teacher Incharge, and Campus Mantri
 export const getLandingPageMembers = () => members.filter(m =>

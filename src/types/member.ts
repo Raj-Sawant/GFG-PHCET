@@ -21,4 +21,5 @@ export interface Member {
   achievements: string[];
   avatar: string; // stock image URL
   coverColor: string;
+  idCardImage?: string;
 }

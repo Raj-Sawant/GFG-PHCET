@@ -1,11 +1,17 @@
-import { useState } from 'react';
+import { useState, useMemo } from 'react';
 import MemberCard from '../components/MemberCard';
 import { members } from '../data/members';
-import { Users } from 'lucide-react';
+import {
+  Users,
+  Search,
+  IdCard,
+  LayoutGrid,
+  X,
+} from 'lucide-react';
 
 const CATEGORIES = [
   'All',
-  'Executive Heads',
+  'Leadership',
   'Faculty & Advisory',
   'Technical',
   'Design & Creative',
@@ -18,53 +24,188 @@ const CATEGORIES = [
 
 export default function TeamPage() {
   const [activeCategory, setActiveCategory] = useState('All');
+  const [searchQuery, setSearchQuery] = useState('');
+  const [viewMode, setViewMode] = useState<'standard' | 'idcard'>('standard');
 
-  const filteredMembers = members.filter((m) => {
-    if (activeCategory === 'All') return true;
-    if (activeCategory === 'Executive Heads') {
-      return (
-        m.position.toLowerCase().includes('head') ||
-        m.position.toLowerCase().includes('lead') ||
-        m.position.toLowerCase().includes('treasurer')
-      );
-    }
-    return m.domain === activeCategory;
-  });
+  // Compute category counts
+  const categoryCounts = useMemo(() => {
+    const counts: Record<string, number> = { All: members.length };
+    CATEGORIES.forEach((cat) => {
+      if (cat === 'All') return;
+      if (cat === 'Leadership') {
+        counts[cat] = members.filter(
+          (m) =>
+            m.domain === 'Leadership' ||
+            m.domain === 'Campus Mantri' ||
+            m.position.toLowerCase().includes('lead') ||
+            m.position.toLowerCase().includes('campus mantri')
+        ).length;
+      } else {
+        counts[cat] = members.filter((m) => m.domain === cat).length;
+      }
+    });
+    return counts;
+  }, []);
+
+  const filteredMembers = useMemo(() => {
+    return members.filter((m) => {
+      // Category filter
+      let matchCat = true;
+      if (activeCategory === 'Leadership') {
+        matchCat =
+          m.domain === 'Leadership' ||
+          m.domain === 'Campus Mantri' ||
+          m.position.toLowerCase().includes('lead') ||
+          m.position.toLowerCase().includes('campus mantri');
+      } else if (activeCategory !== 'All') {
+        matchCat = m.domain === activeCategory;
+      }
+
+      // Search filter
+      let matchSearch = true;
+      if (searchQuery.trim()) {
+        const query = searchQuery.toLowerCase().trim();
+        const inName = m.name.toLowerCase().includes(query);
+        const inPosition = m.position.toLowerCase().includes(query);
+        const inDomain = m.domain.toLowerCase().includes(query);
+        const inDept = m.department ? m.department.toLowerCase().includes(query) : false;
+        const inSkills = m.skills ? m.skills.some((s) => s.toLowerCase().includes(query)) : false;
+        matchSearch = inName || inPosition || inDomain || inDept || inSkills;
+      }
+
+      return matchCat && matchSearch;
+    });
+  }, [activeCategory, searchQuery]);
 
   return (
-    <main style={{ paddingTop: '6.5rem', paddingBottom: '5rem' }}>
-      <div className="section">
-        <div className="section-header">
-          <div className="section-tag">
-            <Users size={13} />
-            <span>Team Hierarchy</span>
+    <main className="team-page-wrapper">
+      {/* Team Header Section */}
+      <section className="team-header-section">
+        <div className="section-tag">
+          <IdCard size={14} />
+          <span>Official Chapter Registry &middot; 2026-27</span>
+        </div>
+
+        <h1 className="team-page-title">
+          Meet the <span>GFG PHCET Team</span>
+        </h1>
+      </section>
+
+      {/* Control Bar: Search & View Switcher */}
+      <section className="team-controls-section">
+        <div className="team-controls-bar">
+          {/* Search Input */}
+          <div className="team-search-box">
+            <Search size={16} className="search-icon" />
+            <input
+              type="text"
+              placeholder="Search member, role, domain, or skills..."
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+              className="team-search-input"
+            />
+            {searchQuery && (
+              <button
+                type="button"
+                onClick={() => setSearchQuery('')}
+                className="search-clear-btn"
+                title="Clear search"
+              >
+                <X size={14} />
+              </button>
+            )}
           </div>
-          <h1 className="section-title">All Team Members</h1>
-          <p className="section-desc">
-            Organized hierarchically from Department Leadership and Executive Heads to Domain Specialists.
-          </p>
-        </div>
 
-        {/* Filter Chips */}
-        <div className="filter-container">
-          {CATEGORIES.map((cat) => (
+          {/* View Mode Switcher */}
+          <div className="view-mode-switcher">
             <button
-              key={cat}
-              className={`filter-chip${activeCategory === cat ? ' active' : ''}`}
-              onClick={() => setActiveCategory(cat)}
+              type="button"
+              className={`view-mode-btn${viewMode === 'standard' ? ' active' : ''}`}
+              onClick={() => setViewMode('standard')}
+              title="Profile Cards View"
             >
-              {cat}
+              <LayoutGrid size={15} />
+              <span>Grid View</span>
             </button>
-          ))}
+            <button
+              type="button"
+              className={`view-mode-btn${viewMode === 'idcard' ? ' active' : ''}`}
+              onClick={() => setViewMode('idcard')}
+              title="Official ID Cards Showcase"
+            >
+              <IdCard size={15} />
+              <span>ID Card View</span>
+            </button>
+          </div>
         </div>
 
-        {/* Members Grid adhering to strict hierarchy */}
-        <div className="team-grid">
-          {filteredMembers.map((member) => (
-            <MemberCard key={member.id} member={member} />
-          ))}
+        {/* Filter Categories Chips */}
+        <div className="filter-container">
+          {CATEGORIES.map((cat) => {
+            const count = categoryCounts[cat] || 0;
+            return (
+              <button
+                key={cat}
+                type="button"
+                className={`filter-chip${activeCategory === cat ? ' active' : ''}`}
+                onClick={() => setActiveCategory(cat)}
+              >
+                <span>{cat}</span>
+                {count > 0 && <span className="chip-count">{count}</span>}
+              </button>
+            );
+          })}
         </div>
-      </div>
+
+        {/* Filter results status indicator */}
+        <div className="filter-status-indicator">
+          <span>Showing <strong>{filteredMembers.length}</strong> of {members.length} members</span>
+          {activeCategory !== 'All' && (
+            <span className="filter-badge-active">
+              Category: {activeCategory}
+            </span>
+          )}
+          {searchQuery && (
+            <span className="filter-badge-active">
+              Search: "{searchQuery}"
+            </span>
+          )}
+        </div>
+      </section>
+
+      {/* Members Grid adhering to ID Card design */}
+      <section className="team-grid-section">
+        {filteredMembers.length === 0 ? (
+          <div className="team-empty-state">
+            <Users size={48} className="empty-icon" />
+            <h3 className="empty-title">No members found</h3>
+            <p className="empty-desc">
+              We couldn't find any team member matching "{searchQuery}". Try searching by another name, domain, or role.
+            </p>
+            <button
+              type="button"
+              className="btn-secondary"
+              onClick={() => {
+                setActiveCategory('All');
+                setSearchQuery('');
+              }}
+              style={{ marginTop: '1rem' }}
+            >
+              Reset Filters
+            </button>
+          </div>
+        ) : (
+          <div className={`team-grid${viewMode === 'idcard' ? ' idcard-grid' : ''}`}>
+            {filteredMembers.map((member) => (
+              <MemberCard
+                key={member.id}
+                member={member}
+                viewMode={viewMode}
+              />
+            ))}
+          </div>
+        )}
+      </section>
     </main>
   );
 }
