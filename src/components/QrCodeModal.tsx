@@ -155,11 +155,9 @@ export default function QrCodeModal({ isOpen, onClose, member }: Props) {
           ) : (
             <canvas
               ref={canvasRef}
+              className="qr-canvas"
               style={{
                 display: loading ? 'none' : 'block',
-                borderRadius: '8px',
-                width: 220,
-                height: 220,
               }}
             />
           )}

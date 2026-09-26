@@ -10,23 +10,23 @@ import {
 } from 'lucide-react';
 import { getLandingPageMembers } from '../data/members';
 import MemberCard from '../components/MemberCard';
-import { InstagramIcon, LinkedInIcon, UnstopIcon } from '../components/SocialIcons';
+import { InstagramIcon, LinkedInIcon, UnstopIcon, WhatsAppIcon } from '../components/SocialIcons';
 
 export default function Home() {
   const leadershipMembers = getLandingPageMembers();
 
   return (
-    <main>
+    <main className="landing-page-main">
+      {/* Cyber Grid Background Matrix extending across the entire landing page */}
+      <div className="landing-full-cyber-grid" />
+
       {/* Hero Section */}
       <section className="hero">
-        {/* Subtle Cyber Grid Background Overlay */}
-        <div className="hero-cyber-grid" />
-
         <div className="hero-grid">
           <div className="hero-content">
             <div className="section-tag hero-badge">
               <span className="live-pulse" />
-              <Code2 size={14} />
+              <Code2 size={13} />
               <span>GeeksForGeeks Student Chapter &middot; 2026&ndash;27</span>
             </div>
 
@@ -38,6 +38,7 @@ export default function Home() {
               Pillai HOC College of Engineering &amp; Technology chapter empowering engineers through competitive programming, workshops, and career advancement.
             </p>
 
+            {/* 4 Icon-Only Social Buttons: Horizontal on all screens */}
             <div className="hero-actions hero-social-actions">
               <a
                 href="https://www.instagram.com/gfg_phcet/"
@@ -45,9 +46,9 @@ export default function Home() {
                 rel="noopener noreferrer"
                 className="hero-social-btn instagram"
                 title="Follow GFG PHCET on Instagram"
+                aria-label="Instagram"
               >
-                <InstagramIcon size={18} />
-                <span>Instagram</span>
+                <InstagramIcon size={20} />
               </a>
               <a
                 href="https://www.linkedin.com/company/geeksforgeeks-phcet-student-chapter/"
@@ -55,9 +56,19 @@ export default function Home() {
                 rel="noopener noreferrer"
                 className="hero-social-btn linkedin"
                 title="Connect with GFG PHCET on LinkedIn"
+                aria-label="LinkedIn"
               >
-                <LinkedInIcon size={18} />
-                <span>LinkedIn</span>
+                <LinkedInIcon size={20} />
+              </a>
+              <a
+                href="https://chat.whatsapp.com/invite/gfgphcet"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hero-social-btn whatsapp"
+                title="Join GFG PHCET WhatsApp Community"
+                aria-label="WhatsApp"
+              >
+                <WhatsAppIcon size={20} />
               </a>
               <a
                 href="https://unstop.com/college-clubs/geeksforgeeks-student-chapter-phcet-pillai-hoc-college-of-engineering-and-technology-phcet-navi-mumbai-299304"
@@ -65,9 +76,9 @@ export default function Home() {
                 rel="noopener noreferrer"
                 className="hero-social-btn unstop"
                 title="GFG PHCET on Unstop"
+                aria-label="Unstop"
               >
-                <UnstopIcon size={18} />
-                <span>Unstop</span>
+                <UnstopIcon size={20} />
               </a>
             </div>
 
@@ -229,7 +240,7 @@ export default function Home() {
         </div>
 
         <div className="section-center-action">
-          <Link to="/team" className="btn-primary team-cta-large">
+          <Link to="/team" className="btn-glassmorphic team-cta-large" title="Explore All 21 Team Members">
             <Users size={17} />
             <span>Explore All 21 Team Members</span>
             <ArrowRight size={17} />
