@@ -29,3 +29,10 @@ export const MailIcon: React.FC<{ size?: number; className?: string }> = ({ size
     <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
   </svg>
 );
+
+export const UnstopIcon: React.FC<{ size?: number; className?: string }> = ({ size = 16, className = '' }) => (
+  <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
+    <circle cx="12" cy="12" r="9.5" />
+    <path d="M8.5 8.5v4a3.5 3.5 0 0 0 7 0v-4" />
+  </svg>
+);

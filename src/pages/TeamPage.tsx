@@ -1,4 +1,4 @@
-import { useState, useMemo } from 'react';
+import { useState, useMemo, useRef, useEffect } from 'react';
 import MemberCard from '../components/MemberCard';
 import { members } from '../data/members';
 import {
@@ -6,6 +6,9 @@ import {
   Search,
   IdCard,
   X,
+  Filter,
+  ChevronDown,
+  Check,
 } from 'lucide-react';
 
 const CATEGORIES = [
@@ -24,6 +27,23 @@ const CATEGORIES = [
 export default function TeamPage() {
   const [activeCategory, setActiveCategory] = useState('All');
   const [searchQuery, setSearchQuery] = useState('');
+  const [isFilterOpen, setIsFilterOpen] = useState(false);
+  const filterDropdownRef = useRef<HTMLDivElement | null>(null);
+
+  // Close dropdown on outside click
+  useEffect(() => {
+    const handleOutsideClick = (e: MouseEvent) => {
+      if (filterDropdownRef.current && !filterDropdownRef.current.contains(e.target as Node)) {
+        setIsFilterOpen(false);
+      }
+    };
+    if (isFilterOpen) {
+      document.addEventListener('mousedown', handleOutsideClick);
+    }
+    return () => {
+      document.removeEventListener('mousedown', handleOutsideClick);
+    };
+  }, [isFilterOpen]);
 
   // Compute category counts
   const categoryCounts = useMemo(() => {
@@ -79,7 +99,7 @@ export default function TeamPage() {
     <main className="team-page-wrapper">
       {/* Team Header Section */}
       <section className="team-header-section">
-        <div className="section-tag">
+        <div className="section-tag team-header-badge">
           <IdCard size={14} />
           <span>Official Chapter Registry &middot; 2026-27</span>
         </div>
@@ -113,10 +133,57 @@ export default function TeamPage() {
               </button>
             )}
           </div>
+
+          {/* Mobile Filter Dropdown Toggle Button */}
+          <div className="filter-dropdown-wrapper mobile-only" ref={filterDropdownRef}>
+            <button
+              type="button"
+              className={`filter-dropdown-toggle-btn${isFilterOpen ? ' active' : ''}`}
+              onClick={() => setIsFilterOpen(!isFilterOpen)}
+              aria-haspopup="listbox"
+              aria-expanded={isFilterOpen}
+            >
+              <div className="filter-dropdown-left">
+                <Filter size={16} className="filter-svg-icon" />
+                <span className="filter-selected-label">{activeCategory}</span>
+                <span className="filter-selected-count">{categoryCounts[activeCategory] || 0}</span>
+              </div>
+              <ChevronDown size={16} className={`filter-chevron${isFilterOpen ? ' open' : ''}`} />
+            </button>
+
+            {/* Mobile Filter Menu Popover */}
+            {isFilterOpen && (
+              <div className="filter-dropdown-menu" role="listbox">
+                {CATEGORIES.map((cat) => {
+                  const count = categoryCounts[cat] || 0;
+                  const isSelected = activeCategory === cat;
+                  return (
+                    <button
+                      key={cat}
+                      type="button"
+                      role="option"
+                      aria-selected={isSelected}
+                      className={`filter-menu-item${isSelected ? ' selected' : ''}`}
+                      onClick={() => {
+                        setActiveCategory(cat);
+                        setIsFilterOpen(false);
+                      }}
+                    >
+                      <div className="filter-menu-item-left">
+                        <span className="filter-menu-name">{cat}</span>
+                        <span className="filter-menu-count">{count}</span>
+                      </div>
+                      {isSelected && <Check size={15} className="filter-menu-check" />}
+                    </button>
+                  );
+                })}
+              </div>
+            )}
+          </div>
         </div>
 
-        {/* Filter Categories Chips */}
-        <div className="filter-container">
+        {/* Desktop Filter Categories Chips */}
+        <div className="filter-container desktop-only">
           {CATEGORIES.map((cat) => {
             const count = categoryCounts[cat] || 0;
             return (

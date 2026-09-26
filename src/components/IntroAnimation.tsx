@@ -134,13 +134,14 @@ export default function IntroAnimation({ forceShow = false, onClose }: IntroAnim
     const scene = new THREE.Scene();
     scene.fog = new THREE.FogExp2(0x040605, 0.025);
 
+    const isMobile = window.innerWidth < 640;
     const camera = new THREE.PerspectiveCamera(
-      65,
+      isMobile ? 70 : 65,
       window.innerWidth / window.innerHeight,
       0.1,
       1200
     );
-    camera.position.z = 32;
+    camera.position.z = isMobile ? 38 : 32;
 
     const renderer = new THREE.WebGLRenderer({
       canvas,
@@ -291,7 +292,9 @@ export default function IntroAnimation({ forceShow = false, onClose }: IntroAnim
 
     const handleResize = () => {
       if (!canvas) return;
+      const isMob = window.innerWidth < 640;
       camera.aspect = window.innerWidth / window.innerHeight;
+      camera.position.z = isMob ? 38 : 32;
       camera.updateProjectionMatrix();
       renderer.setSize(window.innerWidth, window.innerHeight);
     };

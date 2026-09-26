@@ -4,15 +4,13 @@ import {
   Users,
   Code2,
   Award,
-  ChevronDown,
-  ShieldCheck,
   Terminal,
   Cpu,
   Layers,
-  IdCard,
 } from 'lucide-react';
 import { getLandingPageMembers } from '../data/members';
 import MemberCard from '../components/MemberCard';
+import { InstagramIcon, LinkedInIcon, UnstopIcon } from '../components/SocialIcons';
 
 export default function Home() {
   const leadershipMembers = getLandingPageMembers();
@@ -40,14 +38,36 @@ export default function Home() {
               Pillai HOC College of Engineering &amp; Technology chapter empowering engineers through competitive programming, workshops, and career advancement.
             </p>
 
-            <div className="hero-actions">
-              <Link to="/team" className="btn-primary">
-                <span>Meet All Members</span>
-                <ArrowRight size={15} />
-              </Link>
-              <a href="#leadership" className="btn-secondary">
-                <span>Leadership</span>
-                <ChevronDown size={15} />
+            <div className="hero-actions hero-social-actions">
+              <a
+                href="https://www.instagram.com/gfg_phcet/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hero-social-btn instagram"
+                title="Follow GFG PHCET on Instagram"
+              >
+                <InstagramIcon size={18} />
+                <span>Instagram</span>
+              </a>
+              <a
+                href="https://www.linkedin.com/company/geeksforgeeks-phcet-student-chapter/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hero-social-btn linkedin"
+                title="Connect with GFG PHCET on LinkedIn"
+              >
+                <LinkedInIcon size={18} />
+                <span>LinkedIn</span>
+              </a>
+              <a
+                href="https://unstop.com/college-clubs/geeksforgeeks-student-chapter-phcet-pillai-hoc-college-of-engineering-and-technology-phcet-navi-mumbai-299304"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hero-social-btn unstop"
+                title="GFG PHCET on Unstop"
+              >
+                <UnstopIcon size={18} />
+                <span>Unstop</span>
               </a>
             </div>
 
@@ -280,44 +300,6 @@ export default function Home() {
             </p>
             <div className="domain-card-meta">
               <span>LinkedIn &middot; Instagram &middot; Outreach</span>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Official Chapter ID Card Verification Showcase*/}
-      <section className="section idcard-banner-section">
-        <div className="idcard-banner-card">
-          <div className="idcard-banner-content">
-            <div className="section-tag" style={{ background: 'rgba(0, 223, 130, 0.15)' }}>
-              <IdCard size={14} />
-              <span>Official Chapter IDs</span>
-            </div>
-            <h2 className="idcard-banner-title">
-              Consistent &amp; Verified Identity System
-            </h2>
-            <p className="idcard-banner-desc">
-              Every GFG PHCET core committee member receives a verified official chapter credential card featuring their specialized domain, official chapter seal, and verified academic credentials.
-            </p>
-            <div className="idcard-banner-actions">
-              <Link to="/team" className="btn-primary">
-                <span>View All 21 Chapter IDs</span>
-                <ArrowRight size={15} />
-              </Link>
-            </div>
-          </div>
-
-          <div className="idcard-banner-preview">
-            <div className="idcard-sample-mockup">
-              <img
-                src="/assets/id_card_sample.png"
-                alt="GFG PHCET Official ID Card Sample"
-                className="idcard-sample-img"
-              />
-              <div className="sample-mockup-badge">
-                <ShieldCheck size={14} />
-                <span>Verified 2026-27</span>
-              </div>
             </div>
           </div>
         </div>
