@@ -21,11 +21,17 @@ export default function MemberProfileLayout({
   member,
 }: Props) {
   const [isQrOpen, setIsQrOpen] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
   const cardRef = useRef<HTMLDivElement | null>(null);
 
-  // Always scroll to top when member profile loads
+  // Always scroll to top and show smooth 3-dots transition on member load
   useEffect(() => {
     window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+    setIsLoading(true);
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 1200);
+    return () => clearTimeout(timer);
   }, [member.slug]);
 
   // 3D holographic tilt on mouse move
@@ -55,8 +61,27 @@ export default function MemberProfileLayout({
   const emailAddress = member.email || `${member.slug.replace(/-/g, '.')}@phcet.ac.in`;
   const studentCardImg = member.idCardImage || member.avatar;
 
+  if (isLoading) {
+    return (
+      <main className="profile-wrapper profile-loader-wrapper">
+        <div className="profile-dots-loader-container">
+          <div className="profile-dots-glow" />
+          <div className="profile-3dots">
+            <span className="dot dot-1" />
+            <span className="dot dot-2" />
+            <span className="dot dot-3" />
+          </div>
+          <div className="profile-loader-badge">
+            <span className="live-pulse" />
+            <span>ACCESSING MEMBER DOSSIER</span>
+          </div>
+        </div>
+      </main>
+    );
+  }
+
   return (
-    <main className="profile-wrapper">
+    <main className="profile-wrapper profile-loaded-fadein">
       {/* Top Bar Navigation */}
       <div className="profile-top-bar">
         <Link to="/team" className="btn-secondary profile-back-btn">
