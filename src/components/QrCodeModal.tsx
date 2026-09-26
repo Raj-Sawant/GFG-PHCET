@@ -129,20 +129,18 @@ export default function QrCodeModal({ isOpen, onClose, member }: Props) {
   return (
     <div className="qr-modal-backdrop" onClick={onClose}>
       <div className="qr-modal-container" onClick={(e) => e.stopPropagation()}>
-        {/* Close */}
-        <button className="qr-modal-close" onClick={onClose} aria-label="Close">
+        {/* Close Button */}
+        <button className="qr-modal-close-btn" onClick={onClose} aria-label="Close Modal" title="Close">
           <X size={18} />
         </button>
 
         {/* Header */}
-        <div className="qr-modal-header" style={{ justifyContent: 'center', textAlign: 'center' }}>
-          <div style={{ textAlign: 'center' }}>
-            <h3 className="qr-modal-title">{member.name}</h3>
-            <p className="qr-modal-subtitle">{member.position} • {member.domain}</p>
-          </div>
+        <div className="qr-modal-header">
+          <h3 className="qr-modal-title">{member.name}</h3>
+          <p className="qr-modal-subtitle">{member.position} &bull; {member.domain}</p>
         </div>
 
-        {/* QR Code - canvas for reliable browser rendering */}
+        {/* QR Code Canvas Card */}
         <div className="qr-code-box">
           {loading && (
             <div className="qr-loading">
@@ -160,8 +158,8 @@ export default function QrCodeModal({ isOpen, onClose, member }: Props) {
               style={{
                 display: loading ? 'none' : 'block',
                 borderRadius: '8px',
-                width: 240,
-                height: 240,
+                width: 220,
+                height: 220,
               }}
             />
           )}
@@ -169,7 +167,7 @@ export default function QrCodeModal({ isOpen, onClose, member }: Props) {
 
         <p className="qr-scan-hint">
           <QrIcon size={14} style={{ display: 'inline', verticalAlign: 'middle', marginRight: 4 }} />
-          Scan to visit this member's page
+          <span>Scan to visit member profile</span>
         </p>
 
         {/* URL preview */}
@@ -177,21 +175,37 @@ export default function QrCodeModal({ isOpen, onClose, member }: Props) {
           <span>{profileUrl}</span>
         </div>
 
-        {/* Actions */}
+        {/* Actions - Symmetrical Icon-Only Buttons (No Text) */}
         <div className="qr-actions-row">
-          <button onClick={handleCopy} className="btn-secondary qr-action-btn" title="Copy URL">
-            {copied ? <Check size={15} color="#00b386" /> : <Copy size={15} />}
-            <span>{copied ? 'Copied!' : 'Copy Link'}</span>
+          <button
+            type="button"
+            onClick={handleCopy}
+            className={`qr-icon-action-btn copy-btn${copied ? ' copied' : ''}`}
+            title={copied ? 'Link Copied to Clipboard!' : 'Copy Profile Link'}
+            aria-label="Copy Link"
+          >
+            {copied ? <Check size={20} color="#00df82" /> : <Copy size={19} />}
           </button>
 
-          <button onClick={handleDownload} className="btn-secondary qr-action-btn" title="Download QR" disabled={loading}>
-            <Download size={15} />
-            <span>Download</span>
+          <button
+            type="button"
+            onClick={handleDownload}
+            className="qr-icon-action-btn download-btn"
+            title="Download QR Code Image"
+            aria-label="Download QR Code Image"
+            disabled={loading}
+          >
+            <Download size={19} />
           </button>
 
-          <button onClick={handleNativeShare} className="btn-primary qr-action-btn" title="Share profile">
-            <Share2 size={15} />
-            <span>Share</span>
+          <button
+            type="button"
+            onClick={handleNativeShare}
+            className="qr-icon-action-btn share-btn"
+            title="Share Profile Link"
+            aria-label="Share Profile Link"
+          >
+            <Share2 size={19} />
           </button>
         </div>
       </div>

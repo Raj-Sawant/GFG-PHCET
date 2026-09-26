@@ -174,8 +174,9 @@ export default function IntroAnimation({ forceShow = false, onClose }: IntroAnim
     const particleSystem = new THREE.Points(particleGeometry, particleMaterial);
     scene.add(particleSystem);
 
-    // 2. Central 3D Outer Complex Polyhedral Cage
-    const icoGeo = new THREE.IcosahedronGeometry(9, 1);
+    // 2. Central 3D Outer Rhombus / Kite Polyhedral Cage
+    const icoGeo = new THREE.OctahedronGeometry(9, 1);
+    icoGeo.scale(1, 1.35, 1); // Elongated into an elegant 3D Rhombus / Diamond Kite
     const icoMat = new THREE.MeshBasicMaterial({
       color: 0x00df82,
       wireframe: true,
@@ -243,22 +244,31 @@ export default function IntroAnimation({ forceShow = false, onClose }: IntroAnim
     ring3.rotation.y = Math.PI / 4;
     scene.add(ring3);
 
-    // 6. Floating 3D Holographic ID Card Planes in Space
+    // 6. Floating 3D Holographic Rhombus & Kite Prisms in Space (replaces square cards)
     const cardGroup = new THREE.Group();
-    const cardGeo = new THREE.PlaneGeometry(3.6, 5.2);
-    const cardCount = 6;
+    // Kite / Rhombus shape: apex (0, 3.2), right wing (2.0, 0.6), tail (0, -2.6), left wing (-2.0, 0.6)
+    const kiteShape = new THREE.Shape();
+    kiteShape.moveTo(0, 3.2);
+    kiteShape.lineTo(2.0, 0.6);
+    kiteShape.lineTo(0, -2.6);
+    kiteShape.lineTo(-2.0, 0.6);
+    kiteShape.closePath();
+
+    const kiteGeo = new THREE.ShapeGeometry(kiteShape);
+    const cardCount = 8;
     for (let i = 0; i < cardCount; i++) {
-      const cardMat = new THREE.MeshBasicMaterial({
-        color: 0x00df82,
+      const kiteMat = new THREE.MeshBasicMaterial({
+        color: i % 2 === 0 ? 0x00df82 : 0x10b981,
         wireframe: true,
+        side: THREE.DoubleSide,
         transparent: true,
-        opacity: 0.25,
+        opacity: 0.35,
       });
-      const miniCard = new THREE.Mesh(cardGeo, cardMat);
+      const miniKite = new THREE.Mesh(kiteGeo, kiteMat);
       const angle = (i / cardCount) * Math.PI * 2;
-      miniCard.position.set(Math.cos(angle) * 16, Math.sin(angle) * 8, Math.sin(angle * 2) * 6);
-      miniCard.rotation.y = angle + Math.PI / 2;
-      cardGroup.add(miniCard);
+      miniKite.position.set(Math.cos(angle) * 16, Math.sin(angle) * 7.5, Math.sin(angle * 2) * 5.5);
+      miniKite.rotation.set(angle * 0.5, angle + Math.PI / 2, angle * 0.3);
+      cardGroup.add(miniKite);
     }
     scene.add(cardGroup);
 
@@ -351,7 +361,7 @@ export default function IntroAnimation({ forceShow = false, onClose }: IntroAnim
       ringMat3.dispose();
       particleGeometry.dispose();
       particleMaterial.dispose();
-      cardGeo.dispose();
+      kiteGeo.dispose();
     };
   }, [active]);
 
