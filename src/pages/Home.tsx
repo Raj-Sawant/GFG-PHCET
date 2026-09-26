@@ -322,6 +322,24 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* Minimal Landing Footer */}
+      <footer className="minimal-landing-footer">
+        <div className="minimal-footer-inner">
+          <div className="minimal-footer-brand">
+            <span className="footer-logo-dot" />
+            <span className="minimal-brand-name">GFG PHCET</span>
+            <span className="minimal-footer-sep">&bull;</span>
+            <span className="minimal-college-name">Pillai HOC College of Engineering &amp; Technology</span>
+          </div>
+
+          <div className="minimal-footer-meta">
+            <span>Tenure 2026&ndash;2027</span>
+            <span className="minimal-footer-sep">&bull;</span>
+            <Link to="/team" className="minimal-footer-link">Meet the Team</Link>
+          </div>
+        </div>
+      </footer>
     </main>
   );
 }

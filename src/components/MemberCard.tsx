@@ -1,8 +1,9 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import type { Member } from '../types/member';
 import { LinkedInIcon, GithubIcon, InstagramIcon, MailIcon } from './SocialIcons';
-import { ArrowRight, ShieldCheck } from 'lucide-react';
+import { ArrowRight, ShieldCheck, QrCode as QrIcon } from 'lucide-react';
+import QrCodeModal from './QrCodeModal';
 
 interface Props {
   member: Member;
@@ -10,6 +11,7 @@ interface Props {
 }
 
 export default function MemberCard({ member, viewMode = 'standard' }: Props) {
+  const [isQrOpen, setIsQrOpen] = useState(false);
   const cardRef = useRef<HTMLDivElement | null>(null);
   const emailAddress = member.email || `${member.slug.replace(/-/g, '.')}@phcet.ac.in`;
 
@@ -167,6 +169,18 @@ export default function MemberCard({ member, viewMode = 'standard' }: Props) {
               title={`Email ${member.name}`} onClick={(e) => e.stopPropagation()}>
               <MailIcon size={14} />
             </a>
+            <button
+              type="button"
+              className="handle-btn qr"
+              title={`Scan QR Code for ${member.name}`}
+              onClick={(e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                setIsQrOpen(true);
+              }}
+            >
+              <QrIcon size={14} />
+            </button>
           </div>
 
           <Link to={`/member/${member.slug}`} className="card-view-btn" title="View Profile">
@@ -175,6 +189,13 @@ export default function MemberCard({ member, viewMode = 'standard' }: Props) {
           </Link>
         </div>
       </div>
+
+      {/* QR Code Modal */}
+      <QrCodeModal
+        isOpen={isQrOpen}
+        onClose={() => setIsQrOpen(false)}
+        member={member}
+      />
     </div>
   );
 }

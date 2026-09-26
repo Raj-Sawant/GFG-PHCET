@@ -36,9 +36,21 @@ function RedirectHandler() {
   return null;
 }
 
+// Always scroll to the top of the page on route change
+function ScrollToTop() {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+  }, [pathname]);
+
+  return null;
+}
+
 function App() {
   return (
     <BrowserRouter>
+      <ScrollToTop />
       <BackgroundMotion />
       <RedirectHandler />
       <IntroAnimation />

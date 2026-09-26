@@ -116,12 +116,12 @@ export default function IntroAnimation({ forceShow = false, onClose }: IntroAnim
 
         if (next >= 100) {
           window.clearInterval(interval);
-          setTimeout(dismiss, 500);
+          setTimeout(dismiss, 250);
           return 100;
         }
         return next;
       });
-    }, 55);
+    }, 18);
 
     return () => window.clearInterval(interval);
   }, [active, isWarping]);
@@ -442,18 +442,19 @@ export default function IntroAnimation({ forceShow = false, onClose }: IntroAnim
             type="button"
             className="btn-primary cinematic-enter-btn"
             onClick={dismiss}
+            title="Enter Portal"
           >
             <Zap size={16} />
-            <span>Enter Chapter Portal</span>
-            <span className="btn-keyhint">SPACE / ESC</span>
+            <span>Enter</span>
           </button>
 
           <button
             type="button"
             className="cinematic-skip-btn"
             onClick={dismiss}
+            title="Skip Intro"
           >
-            Skip Intro
+            <span>Skip</span>
           </button>
         </div>
       </div>

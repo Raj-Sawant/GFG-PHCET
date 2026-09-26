@@ -5,7 +5,6 @@ import {
   Users,
   Search,
   IdCard,
-  LayoutGrid,
   X,
 } from 'lucide-react';
 
@@ -25,7 +24,6 @@ const CATEGORIES = [
 export default function TeamPage() {
   const [activeCategory, setActiveCategory] = useState('All');
   const [searchQuery, setSearchQuery] = useState('');
-  const [viewMode, setViewMode] = useState<'standard' | 'idcard'>('standard');
 
   // Compute category counts
   const categoryCounts = useMemo(() => {
@@ -115,28 +113,6 @@ export default function TeamPage() {
               </button>
             )}
           </div>
-
-          {/* View Mode Switcher */}
-          <div className="view-mode-switcher">
-            <button
-              type="button"
-              className={`view-mode-btn${viewMode === 'standard' ? ' active' : ''}`}
-              onClick={() => setViewMode('standard')}
-              title="Profile Cards View"
-            >
-              <LayoutGrid size={15} />
-              <span>Grid View</span>
-            </button>
-            <button
-              type="button"
-              className={`view-mode-btn${viewMode === 'idcard' ? ' active' : ''}`}
-              onClick={() => setViewMode('idcard')}
-              title="Official ID Cards Showcase"
-            >
-              <IdCard size={15} />
-              <span>ID Card View</span>
-            </button>
-          </div>
         </div>
 
         {/* Filter Categories Chips */}
@@ -195,12 +171,11 @@ export default function TeamPage() {
             </button>
           </div>
         ) : (
-          <div className={`team-grid${viewMode === 'idcard' ? ' idcard-grid' : ''}`}>
+          <div className="team-grid">
             {filteredMembers.map((member) => (
               <MemberCard
                 key={member.id}
                 member={member}
-                viewMode={viewMode}
               />
             ))}
           </div>

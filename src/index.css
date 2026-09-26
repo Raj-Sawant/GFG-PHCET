@@ -56,6 +56,9 @@ html {
   scroll-behavior: smooth;
   font-size: 16px;
   background-color: var(--bg-black);
+  overflow-x: hidden;
+  max-width: 100%;
+  width: 100%;
 }
 
 body {
@@ -65,14 +68,25 @@ body {
   min-height: 100vh;
   line-height: 1.6;
   overflow-x: hidden;
+  max-width: 100%;
+  width: 100%;
+  position: relative;
   -webkit-font-smoothing: antialiased;
+}
+
+#root {
+  overflow-x: hidden;
+  max-width: 100%;
+  width: 100%;
+  position: relative;
 }
 
 .site-background-motion-canvas {
   position: fixed;
   inset: 0;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
   pointer-events: none;
   z-index: 0;
   opacity: 0.95;
@@ -737,16 +751,17 @@ img {
 }
 
 .stat-card {
-  background: rgba(12, 18, 14, 0.45);
-  border: 1px solid var(--border-light);
+  background: transparent;
+  border: none;
   border-radius: var(--radius-md);
-  padding: 0.85rem 1rem;
+  padding: 0.6rem 0.5rem;
   transition: var(--transition-smooth);
 }
 
 .stat-card:hover {
-  border-color: var(--gfg-border);
-  background: rgba(12, 18, 14, 0.7);
+  border: none;
+  background: transparent;
+  transform: translateY(-2px);
 }
 
 .stat-metric {
@@ -1595,7 +1610,8 @@ img {
 .team-search-box {
   position: relative;
   flex: 1;
-  min-width: 280px;
+  min-width: 0;
+  width: 100%;
 }
 
 .search-icon {
@@ -1920,6 +1936,37 @@ img {
   object-position: center;
   border: none;
   box-shadow: 0 12px 24px rgba(0, 0, 0, 0.6);
+}
+
+/* Centered QR Button Inside Member Profile Card */
+.profile-card-qr-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 1.25rem;
+}
+
+.profile-card-qr-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: rgba(0, 223, 130, 0.1);
+  border: 1px solid rgba(0, 223, 130, 0.35);
+  color: var(--gfg-emerald);
+  cursor: pointer;
+  transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.5);
+}
+
+.profile-card-qr-btn:hover {
+  background: var(--gfg-emerald);
+  color: #040906;
+  transform: translateY(-3px) scale(1.08);
+  box-shadow: 0 0 24px rgba(0, 223, 130, 0.55);
 }
 
 /* Right Column */
@@ -2653,5 +2700,108 @@ img {
     height: auto;
     aspect-ratio: 1074 / 1254;
     display: block;
+  }
+}
+
+/* Minimal Landing Footer */
+.minimal-landing-footer {
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  background: rgba(4, 7, 5, 0.95);
+  backdrop-filter: blur(12px);
+  padding: 1.5rem 2rem;
+  margin-top: 3.5rem;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+.minimal-footer-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.minimal-footer-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.minimal-brand-name {
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.minimal-footer-sep {
+  color: var(--gfg-emerald);
+  opacity: 0.7;
+}
+
+.minimal-footer-meta {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  font-size: 0.82rem;
+  color: var(--text-dim);
+}
+
+.minimal-footer-link {
+  color: var(--gfg-emerald);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+
+.minimal-footer-link:hover {
+  text-decoration: underline;
+  color: #ffffff;
+}
+
+@media (max-width: 768px) {
+  .team-controls-section,
+  .team-grid-section,
+  .team-page-wrapper,
+  .profile-wrapper {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  .minimal-landing-footer {
+    padding: 1.25rem 1rem;
+    margin-top: 2rem;
+  }
+
+  .minimal-footer-inner {
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+
+  .minimal-footer-brand,
+  .minimal-footer-meta {
+    justify-content: center;
+    flex-wrap: wrap;
+    font-size: 0.78rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .team-controls-section,
+  .team-grid-section,
+  .team-page-wrapper,
+  .profile-wrapper {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+    max-width: 100%;
+    overflow-x: hidden;
   }
 }

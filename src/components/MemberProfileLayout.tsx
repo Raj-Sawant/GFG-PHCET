@@ -2,8 +2,6 @@ import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import {
   ArrowLeft,
-  ChevronLeft,
-  ChevronRight,
   Building,
   QrCode as QrIcon,
   ShieldCheck,
@@ -21,24 +19,14 @@ interface Props {
 
 export default function MemberProfileLayout({
   member,
-  prevMember,
-  nextMember,
 }: Props) {
   const [isQrOpen, setIsQrOpen] = useState(false);
   const cardRef = useRef<HTMLDivElement | null>(null);
 
-  // Keyboard navigation between members
+  // Always scroll to top when member profile loads
   useEffect(() => {
-    const handleKeyDown = (e: KeyboardEvent) => {
-      if (e.key === 'ArrowLeft' && prevMember) {
-        window.location.href = `/member/${prevMember.slug}`;
-      } else if (e.key === 'ArrowRight' && nextMember) {
-        window.location.href = `/member/${nextMember.slug}`;
-      }
-    };
-    window.addEventListener('keydown', handleKeyDown);
-    return () => window.removeEventListener('keydown', handleKeyDown);
-  }, [prevMember, nextMember]);
+    window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+  }, [member.slug]);
 
   // 3D holographic tilt on mouse move
   const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
@@ -75,29 +63,6 @@ export default function MemberProfileLayout({
           <ArrowLeft size={15} />
           <span>All Members</span>
         </Link>
-
-        <div className="profile-nav-arrows">
-          {prevMember && (
-            <Link
-              to={`/member/${prevMember.slug}`}
-              className="btn-secondary nav-arrow-btn"
-              title={`Previous: ${prevMember.name} (←)`}
-            >
-              <ChevronLeft size={16} />
-              <span className="arrow-text">Prev</span>
-            </Link>
-          )}
-          {nextMember && (
-            <Link
-              to={`/member/${nextMember.slug}`}
-              className="btn-secondary nav-arrow-btn"
-              title={`Next: ${nextMember.name} (→)`}
-            >
-              <span className="arrow-text">Next</span>
-              <ChevronRight size={16} />
-            </Link>
-          )}
-        </div>
       </div>
 
       {/* Symmetric Profile Card */}
@@ -159,6 +124,19 @@ export default function MemberProfileLayout({
               />
             )}
           </div>
+
+          {/* Centered QR Button inside card: only QR SVG icon, no text */}
+          <div className="profile-card-qr-row">
+            <button
+              type="button"
+              onClick={() => setIsQrOpen(true)}
+              className="profile-card-qr-btn"
+              title={`Scan or Share QR for ${member.name}`}
+              aria-label="Scan or Share QR Code"
+            >
+              <QrIcon size={20} />
+            </button>
+          </div>
         </div>
 
         {/* Right Side: Links, Chapter Details, and QR inside profile */}
@@ -215,18 +193,6 @@ export default function MemberProfileLayout({
                 <span>Email</span>
                 <ExternalLink size={12} className="link-ext-icon" />
               </a>
-
-              {/* QR Code accessible when visiting the member's card */}
-              <button
-                type="button"
-                onClick={() => setIsQrOpen(true)}
-                className="big-link-btn qr-link-btn"
-                title="Scan QR Code"
-              >
-                <QrIcon size={18} />
-                <span>Share QR</span>
-                <ExternalLink size={12} className="link-ext-icon" />
-              </button>
             </div>
           </div>
 
