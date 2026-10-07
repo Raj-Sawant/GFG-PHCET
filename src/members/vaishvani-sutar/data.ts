@@ -22,8 +22,9 @@ export const memberData: Member = {
     "Conducted Junior Python Workshop",
     "Open Source Contributor"
   ],
-  "linkedin": "https://linkedin.com/",
-  "github": "https://github.com/",
+  "email": "vaishnavirs24hcompe@student.mes.ac.in",
+  "linkedin": "https://www.linkedin.com/in/vaishnavi-sutar-a933103ab",
+  "github": "https://github.com/SutarVaishanvi1105",
   "instagram": "https://instagram.com/gfg_phcet",
   "avatar": "/assets/members/vaishvani-sutar.png",
   "idCardImage": "/assets/id-cards/vaishvani-sutar.png",

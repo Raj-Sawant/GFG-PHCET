@@ -22,8 +22,9 @@ export const memberData: Member = {
     "Promotional Content Creation",
     "TechFest Organizing Lead"
   ],
-  "linkedin": "https://linkedin.com/",
-  "github": "https://github.com/",
+  "email": "saloniba24hcompe@student.mes.ac.in",
+  "linkedin": "https://www.linkedin.com/in/saloniagalawe",
+  "github": "https://github.com/saloniagalawe2006-boop",
   "instagram": "https://instagram.com/gfg_phcet",
   "avatar": "/assets/members/saloni-agalawe.png",
   "idCardImage": "/assets/id-cards/saloni-agalawe.png",

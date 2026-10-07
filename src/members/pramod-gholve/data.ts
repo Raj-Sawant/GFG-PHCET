@@ -22,8 +22,9 @@ export const memberData: Member = {
     "100+ Visual Design Assets",
     "Best Design Award at TechFest"
   ],
-  "linkedin": "https://linkedin.com/",
-  "github": "https://github.com/",
+  "email": "pramodwg24hcompe@student.mes.ac.in",
+  "linkedin": "https://www.linkedin.com/in/pramod-gholve-454499346",
+  "github": "https://github.com/pramodwg24hcompe-ops",
   "instagram": "https://instagram.com/gfg_phcet",
   "avatar": "/assets/members/pramod-gholve.png",
   "idCardImage": "/assets/id-cards/pramod-gholve.png",

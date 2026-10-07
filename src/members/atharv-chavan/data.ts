@@ -22,8 +22,9 @@ export const memberData: Member = {
     "Managed Volunteer Squads",
     "Leadership Appreciation Award"
   ],
-  "linkedin": "https://linkedin.com/",
-  "github": "https://github.com/",
+  "email": "atharvnc24hcompe@student.mes.ac.in",
+  "linkedin": "https://www.linkedin.com/in/atharv-chavan-9441a2363",
+  "github": "https://github.com/atharvvchavan",
   "instagram": "https://instagram.com/gfg_phcet",
   "avatar": "/assets/members/atharv-chavan.png",
   "idCardImage": "/assets/id-cards/atharv-chavan.png",

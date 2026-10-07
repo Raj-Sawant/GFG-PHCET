@@ -23,7 +23,7 @@ export const memberData: Member = {
     "Conducted 5+ Tech Bootcamps"
   ],
   "linkedin": "https://linkedin.com/",
-  "github": "https://github.com/",
+  "github": "https://github.com/iamsharwari",
   "instagram": "https://instagram.com/gfg_phcet",
   "avatar": "/assets/members/raj-sawant.png",
   "idCardImage": "/assets/id-cards/raj-sawant.png",

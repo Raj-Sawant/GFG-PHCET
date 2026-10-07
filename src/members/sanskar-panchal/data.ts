@@ -22,8 +22,9 @@ export const memberData: Member = {
     "Handled Sponsor Inquiries",
     "Authored Outreach Playbook"
   ],
-  "linkedin": "https://linkedin.com/",
-  "github": "https://github.com/",
+  "email": "sanskarap24hcompe@student.mes.ac.in",
+  "linkedin": "https://www.linkedin.com/in/sanskar-panchal-53a289377/",
+  "github": "https://github.com/Sanskar1506",
   "instagram": "https://instagram.com/gfg_phcet",
   "avatar": "/assets/members/sanskar-panchal.png",
   "idCardImage": "/assets/id-cards/sanskar-panchal.png",

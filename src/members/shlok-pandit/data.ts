@@ -22,8 +22,9 @@ export const memberData: Member = {
     "Secured 3 Keynote Speakers",
     "60% LinkedIn Audience Surge"
   ],
-  "linkedin": "https://linkedin.com/",
-  "github": "https://github.com/",
+  "email": "shloksp24hcompe@student.mes.ac.in",
+  "linkedin": "https://www.linkedin.com/in/shlok-sachin-pandit-543287377",
+  "github": "https://github.com/Shlok315",
   "instagram": "https://instagram.com/gfg_phcet",
   "avatar": "/assets/members/shlok-pandit.png",
   "idCardImage": "/assets/id-cards/shlok-pandit.png",

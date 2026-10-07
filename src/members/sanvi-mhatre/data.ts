@@ -22,8 +22,9 @@ export const memberData: Member = {
     "Archived 30+ Event Records",
     "Created Standard Report Templates"
   ],
-  "linkedin": "https://linkedin.com/",
-  "github": "https://github.com/",
+  "email": "sanvibm24hcompe@student.mes.ac.in",
+  "linkedin": "https://www.linkedin.com/in/sanvi-bhaskar-mhatre-487990328/",
+  "github": "https://github.com/sanvi17-prog",
   "instagram": "https://instagram.com/gfg_phcet",
   "avatar": "/assets/members/sanvi-mhatre.png",
   "idCardImage": "/assets/id-cards/sanvi-mhatre.png",

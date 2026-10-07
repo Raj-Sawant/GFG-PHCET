@@ -22,8 +22,9 @@ export const memberData: Member = {
     "Top 5% on GeeksforGeeks",
     "Organized 200+ Participant Hackathon"
   ],
-  "linkedin": "https://linkedin.com/",
-  "github": "https://github.com/",
+  "email": "aadityadm24hcompe@student.mes.ac.in",
+  "linkedin": "https://www.linkedin.com/in/aaditya-mahajan0",
+  "github": "https://github.com/AadityaMahajan03",
   "instagram": "https://instagram.com/gfg_phcet",
   "avatar": "/assets/members/aditya-mahajan.png",
   "idCardImage": "/assets/id-cards/aditya-mahajan.png",

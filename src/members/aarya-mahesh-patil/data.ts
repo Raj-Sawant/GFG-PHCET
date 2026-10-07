@@ -22,8 +22,9 @@ export const memberData: Member = {
     "Planned Content Calendar",
     "Key Campaign Contributor"
   ],
-  "linkedin": "https://linkedin.com/",
-  "github": "https://github.com/",
+  "email": "aaryamp24hcompe@student.mes.ac.in",
+  "linkedin": "https://www.linkedin.com/in/aarya-patil-7a73993a6/",
+  "github": "https://github.com/aaryap06",
   "instagram": "https://instagram.com/gfg_phcet",
   "avatar": "/assets/members/aarya-mahesh-patil.png",
   "idCardImage": "/assets/id-cards/aarya-mahesh-patil.png",
