@@ -5,11 +5,11 @@ export const memberData: Member = {
   "slug": "sharwari-shinde",
   "name": "Sharwari Shinde",
   "role": "student",
-  "title": "Campus Mantri (Head)",
+  "title": "Campus Mantri",
   "department": "Computer Engineering",
   "year": "TE",
   "domain": "Campus Mantri",
-  "position": "Head",
+  "position": "Campus Mantri",
   "bio": "Campus Mantri serving as the primary bridge between GeeksforGeeks and the PHCET student body.",
   "skills": [
     "Community Growth",
@@ -27,6 +27,7 @@ export const memberData: Member = {
   "instagram": "https://instagram.com/gfg_phcet",
   "avatar": "/assets/members/sharwari-shinde.png",
   "idCardImage": "/assets/id-cards/sharwari-shinde.png",
-  "coverColor": "#00b386"
+  "coverColor": "#00b386",
+  "email": "sharwarins24hcompe@student.mes.ac.in"
 };
 export default memberData;

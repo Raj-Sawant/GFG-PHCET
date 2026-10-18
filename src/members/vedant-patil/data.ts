@@ -5,11 +5,11 @@ export const memberData: Member = {
   "slug": "vedant-patil",
   "name": "Vedant Patil",
   "role": "student",
-  "title": "Graphics & Design Member",
+  "title": "Design & Creative Member",
   "department": "Computer Engineering",
   "year": "TE",
   "domain": "Design & Creative",
-  "position": "Member",
+  "position": "Design & Creative Member",
   "bio": "Design Member designing high-impact event posters, promotional flyers, and typography sets.",
   "skills": [
     "Graphic Design",
@@ -22,11 +22,12 @@ export const memberData: Member = {
     "Created Post Templates",
     "Brand Guidelines Contributor"
   ],
-  "linkedin": "https://linkedin.com/",
-  "github": "https://github.com/",
+  "linkedin": "",
+  "github": "",
   "instagram": "https://instagram.com/gfg_phcet",
   "avatar": "/assets/members/vedant-patil.png",
   "idCardImage": "/assets/id-cards/vedant-patil.png",
-  "coverColor": "#1abc9c"
+  "coverColor": "#1abc9c",
+  "email": ""
 };
 export default memberData;

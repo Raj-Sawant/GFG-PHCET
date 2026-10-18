@@ -5,11 +5,11 @@ export const memberData: Member = {
   "slug": "shruti-pawar",
   "name": "Shruti Pawar",
   "role": "student",
-  "title": "Graphics & Design Member",
+  "title": "Design & Creative Member",
   "department": "Computer Engineering",
   "year": "TE",
   "domain": "Design & Creative",
-  "position": "Member",
+  "position": "Design & Creative Member",
   "bio": "Design Member contributing creative illustrations, social media templates, and aesthetic assets.",
   "skills": [
     "UI Design",
@@ -22,11 +22,12 @@ export const memberData: Member = {
     "Created Animated Motion Posts",
     "Design Contribution Recognition"
   ],
-  "linkedin": "https://linkedin.com/",
-  "github": "https://github.com/",
+  "linkedin": "https://www.linkedin.com/in/shruti-pawar-7251393ab",
+  "github": "https://github.com/shrutiap24",
   "instagram": "https://instagram.com/gfg_phcet",
   "avatar": "/assets/members/shruti-pawar.png",
   "idCardImage": "/assets/id-cards/shruti-pawar.png",
-  "coverColor": "#16a085"
+  "coverColor": "#16a085",
+  "email": "shrutiap24hcompe@student.mes.ac.in"
 };
 export default memberData;

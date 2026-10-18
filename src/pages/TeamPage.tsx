@@ -117,7 +117,7 @@ export default function TeamPage() {
             <Search size={16} className="search-icon" />
             <input
               type="text"
-              placeholder="Search member, role, domain, or skills..."
+              placeholder="Search member, role, team, or skills..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
               className="team-search-input"
@@ -223,7 +223,7 @@ export default function TeamPage() {
             <Users size={48} className="empty-icon" />
             <h3 className="empty-title">No members found</h3>
             <p className="empty-desc">
-              We couldn't find any team member matching "{searchQuery}". Try searching by another name, domain, or role.
+              We couldn't find any team member matching "{searchQuery}". Try searching by another name, team, or role.
             </p>
             <button
               type="button"

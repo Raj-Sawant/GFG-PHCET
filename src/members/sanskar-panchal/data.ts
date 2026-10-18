@@ -3,13 +3,13 @@ import type { Member } from '../../types/member';
 export const memberData: Member = {
   "id": "14",
   "slug": "sanskar-panchal",
-  "name": "Sanskar Anil Panchal",
+  "name": "Sanskar Panchal",
   "role": "student",
   "title": "PR & Outreach Member",
   "department": "Computer Engineering",
   "year": "TE",
   "domain": "Public Relations",
-  "position": "Member",
+  "position": "PR & Outreach Member",
   "bio": "PR & Outreach Member assisting in student communication campaigns and sponsor outreach.",
   "skills": [
     "PR Strategy",

@@ -4,15 +4,15 @@ export const members: Member[] = [
   {
     "id": "1",
     "slug": "rajashree-gadhave",
-    "name": "Dr. Rajashree Gadhave",
+    "name": "Rajashree Gadhave",
     "role": "faculty",
-    "title": "Head of Department (HoD)",
+    "title": "HOD (Computer Department)",
     "department": "Computer Engineering",
     "institution": "Pillai HOC College of Engineering & Technology",
     "year": "HoD",
     "domain": "Faculty & Advisory",
-    "position": "Head of Department",
-    "bio": "Head of Department guiding academic excellence, research initiatives, and technical leadership at PHCET.",
+    "position": "HOD (Computer Department)",
+    "bio": "HOD (Computer Department) guiding academic excellence, research initiatives, and technical leadership at PHCET.",
     "skills": [
       "Academic Leadership",
       "Strategic Planning",
@@ -25,24 +25,25 @@ export const members: Member[] = [
       "Best Faculty Award"
     ],
     "email": "rajashree.gadhave@phcet.ac.in",
-    "linkedin": "https://linkedin.com/",
-    "github": "https://github.com/",
-    "instagram": "https://instagram.com/gfg_phcet",
+    "linkedin": "https://www.linkedin.com/in/dr-rajashree-gadhave-9b4bab157?utm_source=share_via&utm_content=profile&utm_medium=member_android",
+    "github": "",
+    "instagram": "",
     "avatar": "/assets/members/rajashree-gadhave.png",
-    "coverColor": "#1a8f60"
+    "coverColor": "#1a8f60",
+    "idCardImage": "/assets/id-cards/rajashree-gadhave.png"
   },
   {
     "id": "2",
     "slug": "kashmira-dalvi",
-    "name": "Ms. Kashmira Dalvi",
+    "name": "Kashmira Dalvi",
     "role": "faculty",
-    "title": "Teacher Coordinator",
+    "title": "Faculty Coordinator",
     "department": "Computer Engineering",
     "institution": "Pillai HOC College of Engineering & Technology",
     "year": "Faculty",
     "domain": "Faculty & Advisory",
-    "position": "Teacher Coordinator",
-    "bio": "Teacher Incharge steering GFG PHCET, bridging classroom academics with industry technical standards.",
+    "position": "Faculty Coordinator",
+    "bio": "Faculty Coordinator steering GFG PHCET, bridging classroom academics with industry technical standards.",
     "skills": [
       "Mentorship",
       "Chapter Coordination",
@@ -55,16 +56,17 @@ export const members: Member[] = [
       "Organized National Tech Events"
     ],
     "email": "kashmira.dalvi@phcet.ac.in",
-    "linkedin": "https://linkedin.com/",
-    "github": "https://github.com/",
-    "instagram": "https://instagram.com/gfg_phcet",
+    "linkedin": "https://www.linkedin.com/in/kashmira-dalvi-462629250?utm_source=share_via&utm_content=profile&utm_medium=member_android",
+    "github": "",
+    "instagram": "",
     "avatar": "/assets/members/kashmira-dalvi.png",
-    "coverColor": "#00b386"
+    "coverColor": "#00b386",
+    "idCardImage": "/assets/id-cards/kashmira-dalvi.png"
   },
   {
     "id": "3",
     "slug": "aditya-mahajan",
-    "name": "Aditya Mahajan",
+    "name": "Aaditya Mahajan",
     "role": "student",
     "title": "Team Lead",
     "department": "Computer Engineering",
@@ -83,23 +85,24 @@ export const members: Member[] = [
       "Top 5% on GeeksforGeeks",
       "Organized 200+ Participant Hackathon"
     ],
-    "linkedin": "https://linkedin.com/",
-    "github": "https://github.com/",
+    "linkedin": "https://www.linkedin.com/in/aaditya-mahajan0",
+    "github": "https://github.com/AadityaMahajan03",
     "instagram": "https://instagram.com/gfg_phcet",
     "avatar": "/assets/members/aditya-mahajan.png",
     "idCardImage": "/assets/id-cards/aditya-mahajan.png",
-    "coverColor": "#2ecc71"
+    "coverColor": "#2ecc71",
+    "email": "aadityadm24hcompe@student.mes.ac.in"
   },
   {
     "id": "4",
     "slug": "sharwari-shinde",
     "name": "Sharwari Shinde",
     "role": "student",
-    "title": "Campus Mantri (Head)",
+    "title": "Campus Mantri",
     "department": "Computer Engineering",
     "year": "TE",
     "domain": "Campus Mantri",
-    "position": "Head",
+    "position": "Campus Mantri",
     "bio": "Campus Mantri serving as the primary bridge between GeeksforGeeks and the PHCET student body.",
     "skills": [
       "Community Growth",
@@ -112,12 +115,13 @@ export const members: Member[] = [
       "Campus-wide Coding Drives",
       "College Newsletter Feature"
     ],
-    "linkedin": "https://linkedin.com/",
-    "github": "https://github.com/",
+    "linkedin": "https://www.linkedin.com/in/sharwari-shinde",
+    "github": "https://github.com/iamsharwari",
     "instagram": "https://instagram.com/gfg_phcet",
     "avatar": "/assets/members/sharwari-shinde.png",
     "idCardImage": "/assets/id-cards/sharwari-shinde.png",
-    "coverColor": "#00b386"
+    "coverColor": "#00b386",
+    "email": "sharwarins24hcompe@student.mes.ac.in"
   },
   {
     "id": "5",
@@ -128,7 +132,7 @@ export const members: Member[] = [
     "department": "Computer Engineering",
     "year": "TE",
     "domain": "Technical",
-    "position": "Head",
+    "position": "Technical Head",
     "bio": "Technical Head directing competitive coding tracks, developer workshops, and open-source stacks.",
     "skills": [
       "System Architecture",
@@ -141,23 +145,24 @@ export const members: Member[] = [
       "Open Source Contributor",
       "Conducted 5+ Tech Bootcamps"
     ],
-    "linkedin": "https://linkedin.com/",
-    "github": "https://github.com/",
+    "linkedin": "https://www.linkedin.com/in/raj-sawant-06489a358?utm_source=share_via&utm_content=profile&utm_medium=member_android",
+    "github": "https://github.com/Raj-Sawant",
     "instagram": "https://instagram.com/gfg_phcet",
     "avatar": "/assets/members/raj-sawant.png",
     "idCardImage": "/assets/id-cards/raj-sawant.png",
-    "coverColor": "#27ae60"
+    "coverColor": "#27ae60",
+    "email": "raajsawant200@gmail.com"
   },
   {
     "id": "6",
     "slug": "pramod-gholve",
-    "name": "Pramod Wamanrao Gholve",
+    "name": "Pramod Gholve",
     "role": "student",
     "title": "Design & Creative Head",
     "department": "Computer Engineering",
     "year": "TE",
     "domain": "Design & Creative",
-    "position": "Head",
+    "position": "Design & Creative Head",
     "bio": "Creative Head leading visual brand identity, UI/UX storytelling, and graphic assets for the chapter.",
     "skills": [
       "UI/UX Design",
@@ -170,12 +175,13 @@ export const members: Member[] = [
       "100+ Visual Design Assets",
       "Best Design Award at TechFest"
     ],
-    "linkedin": "https://linkedin.com/",
-    "github": "https://github.com/",
+    "linkedin": "https://www.linkedin.com/in/pramod-gholve-454499346",
+    "github": "https://github.com/pramodwg24hcompe-ops",
     "instagram": "https://instagram.com/gfg_phcet",
     "avatar": "/assets/members/pramod-gholve.png",
     "idCardImage": "/assets/id-cards/pramod-gholve.png",
-    "coverColor": "#27ae60"
+    "coverColor": "#27ae60",
+    "email": "pramodwg24hcompe@student.mes.ac.in"
   },
   {
     "id": "7",
@@ -186,7 +192,7 @@ export const members: Member[] = [
     "department": "Computer Engineering",
     "year": "BE",
     "domain": "Event & Operations",
-    "position": "Head",
+    "position": "Event & Operations Head",
     "bio": "Event Head orchestrating large-scale hackathons, technical seminars, and college venue workflows.",
     "skills": [
       "Event Architecture",
@@ -199,23 +205,24 @@ export const members: Member[] = [
       "Managed Scale Budgets",
       "Awarded Best Event Organizer"
     ],
-    "linkedin": "https://linkedin.com/",
-    "github": "https://github.com/",
+    "linkedin": "",
+    "github": "",
     "instagram": "https://instagram.com/gfg_phcet",
     "avatar": "/assets/members/ramola-lade.png",
     "idCardImage": "/assets/id-cards/ramola-lade.png",
-    "coverColor": "#e67e22"
+    "coverColor": "#e67e22",
+    "email": ""
   },
   {
     "id": "8",
     "slug": "shlok-pandit",
-    "name": "Shlok Sachin Pandit",
+    "name": "Shlok Pandit",
     "role": "student",
     "title": "PR & Outreach Head",
     "department": "Computer Engineering",
     "year": "TE",
     "domain": "Public Relations",
-    "position": "Head",
+    "position": "PR & Outreach Head",
     "bio": "PR Head building corporate alliances, guest speaker sessions, and external community outreach.",
     "skills": [
       "Corporate Outreach",
@@ -228,12 +235,13 @@ export const members: Member[] = [
       "Secured 3 Keynote Speakers",
       "60% LinkedIn Audience Surge"
     ],
-    "linkedin": "https://linkedin.com/",
-    "github": "https://github.com/",
+    "linkedin": "https://www.linkedin.com/in/shlok-sachin-pandit-543287377",
+    "github": "https://github.com/Shlok315",
     "instagram": "https://instagram.com/gfg_phcet",
     "avatar": "/assets/members/shlok-pandit.png",
     "idCardImage": "/assets/id-cards/shlok-pandit.png",
-    "coverColor": "#3498db"
+    "coverColor": "#3498db",
+    "email": "shloksp24hcompe@student.mes.ac.in"
   },
   {
     "id": "9",
@@ -244,7 +252,7 @@ export const members: Member[] = [
     "department": "Computer Engineering",
     "year": "BE",
     "domain": "Social Media & Promotion",
-    "position": "Head",
+    "position": "Social Media & Promotion Head",
     "bio": "Social Media Head driving digital outreach, creative viral campaigns, and community growth.",
     "skills": [
       "Content Strategy",
@@ -257,23 +265,24 @@ export const members: Member[] = [
       "50K+ Views Viral Reel",
       "Created Digital Brand Playbook"
     ],
-    "linkedin": "https://linkedin.com/",
-    "github": "https://github.com/",
+    "linkedin": "",
+    "github": "",
     "instagram": "https://instagram.com/gfg_phcet",
     "avatar": "/assets/members/tejas-patil.png",
     "idCardImage": "/assets/id-cards/tejas-patil.png",
-    "coverColor": "#1abc9c"
+    "coverColor": "#1abc9c",
+    "email": ""
   },
   {
     "id": "10",
     "slug": "siliviya-vellappan",
-    "name": "Siliviya Vellappan",
+    "name": "Silviya Vellappan",
     "role": "student",
     "title": "Club Treasurer",
     "department": "Computer Engineering",
     "year": "TE",
     "domain": "Finance",
-    "position": "Treasurer",
+    "position": "Club Treasurer",
     "bio": "Club Treasurer managing financial appropriations, budget auditing, and resource governance.",
     "skills": [
       "Financial Governance",
@@ -286,23 +295,24 @@ export const members: Member[] = [
       "Zero Audit Discrepancies",
       "Introduced Digital Ledger"
     ],
-    "linkedin": "https://linkedin.com/",
-    "github": "https://github.com/",
+    "linkedin": "https://www.linkedin.com/in/silviya2006",
+    "github": "https://github.com/silviyatech",
     "instagram": "https://instagram.com/gfg_phcet",
     "avatar": "/assets/members/siliviya-vellappan.png",
     "idCardImage": "/assets/id-cards/siliviya-vellappan.png",
-    "coverColor": "#f1c40f"
+    "coverColor": "#f1c40f",
+    "email": "silviyavm24hcompe@student.mes.ac.in"
   },
   {
     "id": "11",
     "slug": "vaishvani-sutar",
-    "name": "Vaishnavi Ravindra Sutar",
+    "name": "Vaishnavi Sutar",
     "role": "student",
     "title": "Technical Member",
     "department": "Computer Engineering",
     "year": "TE",
     "domain": "Technical",
-    "position": "Member",
+    "position": "Technical Member",
     "bio": "Technical Member facilitating problem-solving sessions, C++ programming, and web development.",
     "skills": [
       "DSA",
@@ -315,12 +325,13 @@ export const members: Member[] = [
       "Conducted Junior Python Workshop",
       "Open Source Contributor"
     ],
-    "linkedin": "https://linkedin.com/",
-    "github": "https://github.com/",
+    "linkedin": "https://www.linkedin.com/in/vaishnavi-sutar-a933103ab",
+    "github": "https://github.com/SutarVaishanvi1105",
     "instagram": "https://instagram.com/gfg_phcet",
     "avatar": "/assets/members/vaishvani-sutar.png",
     "idCardImage": "/assets/id-cards/vaishvani-sutar.png",
-    "coverColor": "#27ae60"
+    "coverColor": "#27ae60",
+    "email": "vaishnavirs24hcompe@student.mes.ac.in"
   },
   {
     "id": "12",
@@ -331,7 +342,7 @@ export const members: Member[] = [
     "department": "Computer Engineering",
     "year": "TE",
     "domain": "Documentation",
-    "position": "Member",
+    "position": "Documentation Member",
     "bio": "Documentation Member maintaining official club event records, technical papers, and summaries.",
     "skills": [
       "Technical Writing",
@@ -344,12 +355,13 @@ export const members: Member[] = [
       "Archived 30+ Event Records",
       "Created Standard Report Templates"
     ],
-    "linkedin": "https://linkedin.com/",
-    "github": "https://github.com/",
+    "linkedin": "https://www.linkedin.com/in/sanvi-bhaskar-mhatre-487990328/",
+    "github": "https://github.com/sanvi17-prog",
     "instagram": "https://instagram.com/gfg_phcet",
     "avatar": "/assets/members/sanvi-mhatre.png",
     "idCardImage": "/assets/id-cards/sanvi-mhatre.png",
-    "coverColor": "#9b59b6"
+    "coverColor": "#9b59b6",
+    "email": "sanvibm24hcompe@student.mes.ac.in"
   },
   {
     "id": "13",
@@ -360,7 +372,7 @@ export const members: Member[] = [
     "department": "Computer Engineering",
     "year": "TE",
     "domain": "Documentation",
-    "position": "Member",
+    "position": "Documentation Member",
     "bio": "Documentation Member drafting editorial summaries, event briefs, and official newsletters.",
     "skills": [
       "Content Writing",
@@ -373,23 +385,24 @@ export const members: Member[] = [
       "Co-authored Annual Report",
       "Best Written Report Award"
     ],
-    "linkedin": "https://linkedin.com/",
-    "github": "https://github.com/",
+    "linkedin": "https://www.linkedin.com/in/isha-kondilkar-420795348",
+    "github": "https://github.com/ishakondilkar",
     "instagram": "https://instagram.com/gfg_phcet",
     "avatar": "/assets/members/isha-kondilkar.png",
     "idCardImage": "/assets/id-cards/isha-kondilkar.png",
-    "coverColor": "#8e44ad"
+    "coverColor": "#8e44ad",
+    "email": "ishakk24hcompe@student.mes.ac.in"
   },
   {
     "id": "14",
     "slug": "sanskar-panchal",
-    "name": "Sanskar Anil Panchal",
+    "name": "Sanskar Panchal",
     "role": "student",
     "title": "PR & Outreach Member",
     "department": "Computer Engineering",
     "year": "TE",
     "domain": "Public Relations",
-    "position": "Member",
+    "position": "PR & Outreach Member",
     "bio": "PR & Outreach Member assisting in student communication campaigns and sponsor outreach.",
     "skills": [
       "PR Strategy",
@@ -402,12 +415,13 @@ export const members: Member[] = [
       "Handled Sponsor Inquiries",
       "Authored Outreach Playbook"
     ],
-    "linkedin": "https://linkedin.com/",
-    "github": "https://github.com/",
+    "linkedin": "https://www.linkedin.com/in/sanskar-panchal-53a289377/",
+    "github": "https://github.com/Sanskar1506",
     "instagram": "https://instagram.com/gfg_phcet",
     "avatar": "/assets/members/sanskar-panchal.png",
     "idCardImage": "/assets/id-cards/sanskar-panchal.png",
-    "coverColor": "#2980b9"
+    "coverColor": "#2980b9",
+    "email": "sanskarap24hcompe@student.mes.ac.in"
   },
   {
     "id": "15",
@@ -418,7 +432,7 @@ export const members: Member[] = [
     "department": "Computer Engineering",
     "year": "TE",
     "domain": "Social Media & Promotion",
-    "position": "Member",
+    "position": "Social Media Member",
     "bio": "Social Media Member producing digital stories, event buzz, and short-form engagement content.",
     "skills": [
       "Content Creation",
@@ -431,12 +445,13 @@ export const members: Member[] = [
       "Managed Club Story Coverage",
       "Viral Campaign Contributor"
     ],
-    "linkedin": "https://linkedin.com/",
-    "github": "https://github.com/",
+    "linkedin": "",
+    "github": "",
     "instagram": "https://instagram.com/gfg_phcet",
     "avatar": "/assets/members/aarya-bhoir.png",
     "idCardImage": "/assets/id-cards/aarya-bhoir.png",
-    "coverColor": "#16a085"
+    "coverColor": "#16a085",
+    "email": ""
   },
   {
     "id": "16",
@@ -447,7 +462,7 @@ export const members: Member[] = [
     "department": "Computer Engineering",
     "year": "SE",
     "domain": "Social Media & Promotion",
-    "position": "Member",
+    "position": "Social Media Member",
     "bio": "Social Media Member bringing second-year creative energy to digital marketing and photo shoots.",
     "skills": [
       "Digital Storytelling",
@@ -460,23 +475,24 @@ export const members: Member[] = [
       "Designed 10+ Promotional Posts",
       "Active Workshop Facilitator"
     ],
-    "linkedin": "https://linkedin.com/",
-    "github": "https://github.com/",
+    "linkedin": "",
+    "github": "",
     "instagram": "https://instagram.com/gfg_phcet",
     "avatar": "/assets/members/anushka-gharat.png",
     "idCardImage": "/assets/id-cards/anushka-gharat.png",
-    "coverColor": "#2ecc71"
+    "coverColor": "#2ecc71",
+    "email": ""
   },
   {
     "id": "17",
     "slug": "aarya-mahesh-patil",
-    "name": "Aarya Mahesh Patil",
+    "name": "Aarya Patil",
     "role": "student",
     "title": "Social Media Member",
     "department": "Computer Engineering",
     "year": "TE",
     "domain": "Social Media & Promotion",
-    "position": "Member",
+    "position": "Social Media Member",
     "bio": "Social Media Member producing promotional video clips and managing cross-channel engagement.",
     "skills": [
       "Video Production",
@@ -489,23 +505,24 @@ export const members: Member[] = [
       "Planned Content Calendar",
       "Key Campaign Contributor"
     ],
-    "linkedin": "https://linkedin.com/",
-    "github": "https://github.com/",
+    "linkedin": "https://www.linkedin.com/in/aarya-patil-7a73993a6/",
+    "github": "https://github.com/aaryap06",
     "instagram": "https://instagram.com/gfg_phcet",
     "avatar": "/assets/members/aarya-mahesh-patil.png",
     "idCardImage": "/assets/id-cards/aarya-mahesh-patil.png",
-    "coverColor": "#00b386"
+    "coverColor": "#00b386",
+    "email": "aaryamp24hcompe@student.mes.ac.in"
   },
   {
     "id": "18",
     "slug": "vedant-patil",
     "name": "Vedant Patil",
     "role": "student",
-    "title": "Graphics & Design Member",
+    "title": "Design & Creative Member",
     "department": "Computer Engineering",
     "year": "TE",
     "domain": "Design & Creative",
-    "position": "Member",
+    "position": "Design & Creative Member",
     "bio": "Design Member designing high-impact event posters, promotional flyers, and typography sets.",
     "skills": [
       "Graphic Design",
@@ -518,23 +535,24 @@ export const members: Member[] = [
       "Created Post Templates",
       "Brand Guidelines Contributor"
     ],
-    "linkedin": "https://linkedin.com/",
-    "github": "https://github.com/",
+    "linkedin": "",
+    "github": "",
     "instagram": "https://instagram.com/gfg_phcet",
     "avatar": "/assets/members/vedant-patil.png",
     "idCardImage": "/assets/id-cards/vedant-patil.png",
-    "coverColor": "#1abc9c"
+    "coverColor": "#1abc9c",
+    "email": ""
   },
   {
     "id": "19",
     "slug": "shruti-pawar",
     "name": "Shruti Pawar",
     "role": "student",
-    "title": "Graphics & Design Member",
+    "title": "Design & Creative Member",
     "department": "Computer Engineering",
     "year": "TE",
     "domain": "Design & Creative",
-    "position": "Member",
+    "position": "Design & Creative Member",
     "bio": "Design Member contributing creative illustrations, social media templates, and aesthetic assets.",
     "skills": [
       "UI Design",
@@ -547,23 +565,24 @@ export const members: Member[] = [
       "Created Animated Motion Posts",
       "Design Contribution Recognition"
     ],
-    "linkedin": "https://linkedin.com/",
-    "github": "https://github.com/",
+    "linkedin": "https://www.linkedin.com/in/shruti-pawar-7251393ab",
+    "github": "https://github.com/shrutiap24",
     "instagram": "https://instagram.com/gfg_phcet",
     "avatar": "/assets/members/shruti-pawar.png",
     "idCardImage": "/assets/id-cards/shruti-pawar.png",
-    "coverColor": "#16a085"
+    "coverColor": "#16a085",
+    "email": "shrutiap24hcompe@student.mes.ac.in"
   },
   {
     "id": "20",
     "slug": "atharv-chavan",
-    "name": "Atharv Naresh Chavan",
+    "name": "Atharv Chavan",
     "role": "student",
     "title": "Event & Operations Member",
     "department": "Computer Engineering",
     "year": "TE",
     "domain": "Event & Operations",
-    "position": "Member",
+    "position": "Event & Operations Member",
     "bio": "Operations Member managing volunteer coordination, event staging, and registration flows.",
     "skills": [
       "Event Coordination",
@@ -576,12 +595,13 @@ export const members: Member[] = [
       "Managed Volunteer Squads",
       "Leadership Appreciation Award"
     ],
-    "linkedin": "https://linkedin.com/",
-    "github": "https://github.com/",
+    "linkedin": "https://www.linkedin.com/in/atharv-chavan-9441a2363",
+    "github": "https://github.com/atharvvchavan",
     "instagram": "https://instagram.com/gfg_phcet",
     "avatar": "/assets/members/atharv-chavan.png",
     "idCardImage": "/assets/id-cards/atharv-chavan.png",
-    "coverColor": "#f39c12"
+    "coverColor": "#f39c12",
+    "email": "atharvnc24hcompe@student.mes.ac.in"
   },
   {
     "id": "21",
@@ -592,7 +612,7 @@ export const members: Member[] = [
     "department": "Computer Engineering",
     "year": "TE",
     "domain": "Event & Operations",
-    "position": "Member",
+    "position": "Event & Operations Member",
     "bio": "Operations Member facilitating audience hospitality, speaker welcoming, and hall management.",
     "skills": [
       "Audience Engagement",
@@ -605,12 +625,13 @@ export const members: Member[] = [
       "Promotional Content Creation",
       "TechFest Organizing Lead"
     ],
-    "linkedin": "https://linkedin.com/",
-    "github": "https://github.com/",
+    "linkedin": "https://www.linkedin.com/in/saloniagalawe",
+    "github": "https://github.com/saloniagalawe2006-boop",
     "instagram": "https://instagram.com/gfg_phcet",
     "avatar": "/assets/members/saloni-agalawe.png",
     "idCardImage": "/assets/id-cards/saloni-agalawe.png",
-    "coverColor": "#e74c3c"
+    "coverColor": "#e74c3c",
+    "email": "saloniba24hcompe@student.mes.ac.in"
   }
 ];
 

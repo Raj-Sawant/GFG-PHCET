@@ -4,7 +4,6 @@ import {
   ArrowLeft,
   Building,
   QrCode as QrIcon,
-  ShieldCheck,
   ExternalLink,
 } from 'lucide-react';
 import type { Member } from '../types/member';
@@ -24,17 +23,17 @@ export default function MemberProfileLayout({
   const [isLoading, setIsLoading] = useState(true);
   const cardRef = useRef<HTMLDivElement | null>(null);
 
-  // Always scroll to top and show smooth 3-dots transition on member load
+  // Smooth minimal 3-dots loading transition on route navigation
   useEffect(() => {
-    window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
     setIsLoading(true);
+    window.scrollTo({ top: 0, behavior: 'instant' });
     const timer = setTimeout(() => {
       setIsLoading(false);
     }, 800);
     return () => clearTimeout(timer);
   }, [member.slug]);
 
-  // 3D holographic tilt on mouse move
+  // 3D Card Hover / Tilt Physics
   const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
     if (!cardRef.current) return;
     const rect = cardRef.current.getBoundingClientRect();
@@ -58,7 +57,7 @@ export default function MemberProfileLayout({
   };
 
   const isFaculty = member.role === 'faculty';
-  const emailAddress = member.email || `${member.slug.replace(/-/g, '.')}@phcet.ac.in`;
+  const emailAddress = member.email || '';
   const studentCardImg = member.idCardImage || member.avatar;
 
   if (isLoading) {
@@ -107,12 +106,24 @@ export default function MemberProfileLayout({
               <span>{member.domain}</span>
             </div>
             <h1 className="profile-member-name">{member.name}</h1>
-            <div className="profile-member-position">{member.position}</div>
+            <div className="profile-member-position">{member.title || member.position}</div>
           </div>
 
-          {/* Photo Stage – Exact Official ID Card Image from PDF */}
-          <div className={`profile-photo-stage${!isFaculty ? ' profile-id-card-stage' : ''}`}>
-            {isFaculty ? (
+          {/* Photo Stage – Exact Official ID Card Image from PDF / official graphic */}
+          <div className={`profile-photo-stage${member.idCardImage ? ' profile-id-card-stage' : ''}`}>
+            {member.idCardImage ? (
+              <img
+                src={member.idCardImage}
+                alt={`${member.name} Official GFG PHCET ID Card`}
+                className="profile-id-card-full-img"
+                loading="eager"
+                decoding="async"
+                onError={(e) => {
+                  (e.target as HTMLImageElement).src =
+                    `https://ui-avatars.com/api/?name=${encodeURIComponent(member.name)}&background=00b386&color=fff&size=600`;
+                }}
+              />
+            ) : isFaculty ? (
               <div className="faculty-badge-frame large">
                 <img
                   src={member.avatar}
@@ -123,10 +134,6 @@ export default function MemberProfileLayout({
                       `https://ui-avatars.com/api/?name=${encodeURIComponent(member.name)}&background=00b386&color=fff&size=600`;
                   }}
                 />
-                <div className="faculty-pillar-tag">
-                  <ShieldCheck size={12} />
-                  <span>CHAPTER PILLAR</span>
-                </div>
               </div>
             ) : (
               <img
@@ -163,35 +170,39 @@ export default function MemberProfileLayout({
           <div className="profile-links-section">
             <div className="profile-section-label">Connect &amp; Social Handles</div>
             <div className="profile-big-links-grid">
-              {member.linkedin && (
+              <a
+                href={member.linkedin || ''}
+                target={member.linkedin ? "_blank" : undefined}
+                rel="noopener noreferrer"
+                className={`big-link-btn linkedin${!member.linkedin ? ' disabled' : ''}`}
+                title={member.linkedin ? "LinkedIn Profile" : "LinkedIn not provided"}
+                onClick={(e) => {
+                  if (!member.linkedin) e.preventDefault();
+                }}
+              >
+                <LinkedInIcon size={18} />
+                <span>LinkedIn</span>
+                {member.linkedin && <ExternalLink size={12} className="link-ext-icon" />}
+              </a>
+              {!isFaculty && (
                 <a
-                  href={member.linkedin}
-                  target="_blank"
+                  href={member.github || ''}
+                  target={member.github ? "_blank" : undefined}
                   rel="noopener noreferrer"
-                  className="big-link-btn linkedin"
-                  title="LinkedIn Profile"
-                >
-                  <LinkedInIcon size={18} />
-                  <span>LinkedIn</span>
-                  <ExternalLink size={12} className="link-ext-icon" />
-                </a>
-              )}
-              {member.github && (
-                <a
-                  href={member.github}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="big-link-btn github"
-                  title="GitHub Profile"
+                  className={`big-link-btn github${!member.github ? ' disabled' : ''}`}
+                  title={member.github ? "GitHub Profile" : "GitHub not provided"}
+                  onClick={(e) => {
+                    if (!member.github) e.preventDefault();
+                  }}
                 >
                   <GithubIcon size={18} />
                   <span>GitHub</span>
-                  <ExternalLink size={12} className="link-ext-icon" />
+                  {member.github && <ExternalLink size={12} className="link-ext-icon" />}
                 </a>
               )}
-              {member.instagram && (
+              {!isFaculty && member.instagram && (
                 <a
-                  href={member.instagram}
+                  href={member.instagram || ''}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="big-link-btn instagram"
@@ -203,13 +214,16 @@ export default function MemberProfileLayout({
                 </a>
               )}
               <a
-                href={`mailto:${emailAddress}`}
-                className="big-link-btn email"
-                title={`Official Email (${emailAddress})`}
+                href={emailAddress ? `mailto:${emailAddress}` : ''}
+                className={`big-link-btn email${!emailAddress ? ' disabled' : ''}`}
+                title={emailAddress ? `Official Email (${emailAddress})` : 'Email not provided'}
+                onClick={(e) => {
+                  if (!emailAddress) e.preventDefault();
+                }}
               >
                 <MailIcon size={18} />
                 <span>Email</span>
-                <ExternalLink size={12} className="link-ext-icon" />
+                {emailAddress && <ExternalLink size={12} className="link-ext-icon" />}
               </a>
             </div>
           </div>
@@ -223,32 +237,27 @@ export default function MemberProfileLayout({
 
             <div className="profile-meta-grid">
               <div className="profile-meta-row">
-                <span className="profile-meta-label">Domain</span>
+                <span className="profile-meta-label">Team</span>
                 <span className="profile-meta-val highlight">{member.domain}</span>
               </div>
               <div className="profile-meta-row">
                 <span className="profile-meta-label">Position</span>
-                <span className="profile-meta-val">{member.position}</span>
+                <span className="profile-meta-val">{member.title || member.position}</span>
               </div>
               <div className="profile-meta-row">
                 <span className="profile-meta-label">Department</span>
                 <span className="profile-meta-val">{member.department}</span>
               </div>
-              <div className="profile-meta-row">
-                <span className="profile-meta-label">Tenure Period</span>
-                <span className="profile-meta-val highlight">2026&ndash;2027</span>
-              </div>
+              {!isFaculty && (
+                <div className="profile-meta-row">
+                  <span className="profile-meta-label">Tenure Period</span>
+                  <span className="profile-meta-val highlight">2026&ndash;2027</span>
+                </div>
+              )}
               <div className="profile-meta-row full-width">
                 <span className="profile-meta-label">Institution</span>
                 <span className="profile-meta-val">
                   Pillai HOC College of Engineering &amp; Technology (PHCET)
-                </span>
-              </div>
-              <div className="profile-meta-row full-width">
-                <span className="profile-meta-label">Credential Verification</span>
-                <span className="profile-meta-val highlight" style={{ display: 'flex', alignItems: 'center', gap: '0.4rem' }}>
-                  <ShieldCheck size={14} />
-                  <span>Verified Official GFG PHCET Core Committee Member</span>
                 </span>
               </div>
             </div>

@@ -10,7 +10,7 @@ import {
 } from 'lucide-react';
 import { getLandingPageMembers } from '../data/members';
 import MemberCard from '../components/MemberCard';
-import { InstagramIcon, LinkedInIcon, UnstopIcon, WhatsAppIcon } from '../components/SocialIcons';
+import { InstagramIcon, LinkedInIcon } from '../components/SocialIcons';
 
 export default function Home() {
   const leadershipMembers = getLandingPageMembers();
@@ -60,26 +60,6 @@ export default function Home() {
               >
                 <LinkedInIcon size={20} />
               </a>
-              <a
-                href="https://chat.whatsapp.com/invite/gfgphcet"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hero-social-btn whatsapp"
-                title="Join GFG PHCET WhatsApp Community"
-                aria-label="WhatsApp"
-              >
-                <WhatsAppIcon size={20} />
-              </a>
-              <a
-                href="https://unstop.com/college-clubs/geeksforgeeks-student-chapter-phcet-pillai-hoc-college-of-engineering-and-technology-phcet-navi-mumbai-299304"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hero-social-btn unstop"
-                title="GFG PHCET on Unstop"
-                aria-label="Unstop"
-              >
-                <UnstopIcon size={20} />
-              </a>
             </div>
 
             {/* Stats Strip with Cyber Coordinates */}
@@ -90,11 +70,7 @@ export default function Home() {
               </div>
               <div className="stat-card">
                 <div className="stat-metric">6</div>
-                <div className="stat-label">Domains</div>
-              </div>
-              <div className="stat-card">
-                <div className="stat-metric">100%</div>
-                <div className="stat-label">Student Driven</div>
+                <div className="stat-label">Teams</div>
               </div>
             </div>
           </div>
@@ -253,9 +229,9 @@ export default function Home() {
         <div className="section-header">
           <div className="section-tag">
             <Layers size={14} />
-            <span>Operational Domains</span>
+            <span>Operational Teams</span>
           </div>
-          <h2 className="section-title">Engineered Across 6 Key Domains</h2>
+          <h2 className="section-title">Engineered Across 6 Key Teams</h2>
           <p className="section-desc">
             Every department functions as a synchronized unit to conduct hackathons, manage competitive programming tracks, build community projects, and foster student leadership.
           </p>

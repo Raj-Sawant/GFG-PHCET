@@ -9,7 +9,7 @@ export const memberData: Member = {
   "department": "Computer Engineering",
   "year": "BE",
   "domain": "Event & Operations",
-  "position": "Head",
+  "position": "Event & Operations Head",
   "bio": "Event Head orchestrating large-scale hackathons, technical seminars, and college venue workflows.",
   "skills": [
     "Event Architecture",
@@ -22,11 +22,12 @@ export const memberData: Member = {
     "Managed Scale Budgets",
     "Awarded Best Event Organizer"
   ],
-  "linkedin": "https://linkedin.com/",
-  "github": "https://github.com/",
+  "linkedin": "",
+  "github": "",
   "instagram": "https://instagram.com/gfg_phcet",
   "avatar": "/assets/members/ramola-lade.png",
   "idCardImage": "/assets/id-cards/ramola-lade.png",
-  "coverColor": "#e67e22"
+  "coverColor": "#e67e22",
+  "email": ""
 };
 export default memberData;

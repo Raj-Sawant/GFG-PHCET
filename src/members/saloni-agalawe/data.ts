@@ -9,7 +9,7 @@ export const memberData: Member = {
   "department": "Computer Engineering",
   "year": "TE",
   "domain": "Event & Operations",
-  "position": "Member",
+  "position": "Event & Operations Member",
   "bio": "Operations Member facilitating audience hospitality, speaker welcoming, and hall management.",
   "skills": [
     "Audience Engagement",

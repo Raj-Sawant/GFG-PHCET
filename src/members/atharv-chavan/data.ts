@@ -3,13 +3,13 @@ import type { Member } from '../../types/member';
 export const memberData: Member = {
   "id": "20",
   "slug": "atharv-chavan",
-  "name": "Atharv Naresh Chavan",
+  "name": "Atharv Chavan",
   "role": "student",
   "title": "Event & Operations Member",
   "department": "Computer Engineering",
   "year": "TE",
   "domain": "Event & Operations",
-  "position": "Member",
+  "position": "Event & Operations Member",
   "bio": "Operations Member managing volunteer coordination, event staging, and registration flows.",
   "skills": [
     "Event Coordination",

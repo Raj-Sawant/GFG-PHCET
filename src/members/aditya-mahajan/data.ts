@@ -3,7 +3,7 @@ import type { Member } from '../../types/member';
 export const memberData: Member = {
   "id": "3",
   "slug": "aditya-mahajan",
-  "name": "Aditya Mahajan",
+  "name": "Aaditya Mahajan",
   "role": "student",
   "title": "Team Lead",
   "department": "Computer Engineering",

@@ -3,13 +3,13 @@ import type { Member } from '../../types/member';
 export const memberData: Member = {
   "id": "6",
   "slug": "pramod-gholve",
-  "name": "Pramod Wamanrao Gholve",
+  "name": "Pramod Gholve",
   "role": "student",
   "title": "Design & Creative Head",
   "department": "Computer Engineering",
   "year": "TE",
   "domain": "Design & Creative",
-  "position": "Head",
+  "position": "Design & Creative Head",
   "bio": "Creative Head leading visual brand identity, UI/UX storytelling, and graphic assets for the chapter.",
   "skills": [
     "UI/UX Design",

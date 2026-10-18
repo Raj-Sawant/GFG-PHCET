@@ -3,15 +3,15 @@ import type { Member } from '../../types/member';
 export const memberData: Member = {
   "id": "2",
   "slug": "kashmira-dalvi",
-  "name": "Ms. Kashmira Dalvi",
+  "name": "Kashmira Dalvi",
   "role": "faculty",
-  "title": "Teacher Coordinator",
+  "title": "Faculty Coordinator",
   "department": "Computer Engineering",
   "institution": "Pillai HOC College of Engineering & Technology",
   "year": "Faculty",
   "domain": "Faculty & Advisory",
-  "position": "Teacher Coordinator",
-  "bio": "Teacher Incharge steering GFG PHCET, bridging classroom academics with industry technical standards.",
+  "position": "Faculty Coordinator",
+  "bio": "Faculty Coordinator steering GFG PHCET, bridging classroom academics with industry technical standards.",
   "skills": [
     "Mentorship",
     "Chapter Coordination",
@@ -24,10 +24,11 @@ export const memberData: Member = {
     "Organized National Tech Events"
   ],
   "email": "kashmira.dalvi@phcet.ac.in",
-  "linkedin": "https://linkedin.com/",
-  "github": "https://github.com/",
-  "instagram": "https://instagram.com/gfg_phcet",
+  "linkedin": "https://www.linkedin.com/in/kashmira-dalvi-462629250?utm_source=share_via&utm_content=profile&utm_medium=member_android",
+  "github": "",
+  "instagram": "",
   "avatar": "/assets/members/kashmira-dalvi.png",
-  "coverColor": "#00b386"
+  "coverColor": "#00b386",
+  "idCardImage": "/assets/id-cards/kashmira-dalvi.png"
 };
 export default memberData;

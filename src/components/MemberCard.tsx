@@ -2,7 +2,7 @@ import React, { useRef } from 'react';
 import { Link } from 'react-router-dom';
 import type { Member } from '../types/member';
 import { LinkedInIcon, GithubIcon, InstagramIcon, MailIcon } from './SocialIcons';
-import { ArrowRight, ShieldCheck } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 
 interface Props {
   member: Member;
@@ -11,7 +11,7 @@ interface Props {
 
 export default function MemberCard({ member, viewMode = 'standard' }: Props) {
   const cardRef = useRef<HTMLDivElement | null>(null);
-  const emailAddress = member.email || `${member.slug.replace(/-/g, '.')}@phcet.ac.in`;
+  const emailAddress = member.email || '';
 
   const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
     if (!cardRef.current) return;
@@ -64,7 +64,7 @@ export default function MemberCard({ member, viewMode = 'standard' }: Props) {
         <div className="id-card-footer-strip">
           <div className="id-card-footer-info">
             <div className="id-card-footer-name">{member.name}</div>
-            <div className="id-card-footer-role">{member.position}</div>
+            <div className="id-card-footer-role">{member.title || member.position}</div>
           </div>
           <Link to={`/member/${member.slug}`} className="card-view-btn" title="View Profile">
             <span>Profile</span>
@@ -76,9 +76,8 @@ export default function MemberCard({ member, viewMode = 'standard' }: Props) {
   }
 
   // ── Standard card view ─────────────────────────────────────────────────────
-  // Show official ID card image in photo box if available (students).
-  // Faculty retain circular photo treatment.
-  const photoSrc = (!isFaculty && member.idCardImage) ? member.idCardImage : member.avatar;
+  // Show official ID card image in photo box if available (for both students and faculty).
+  const cardImage = member.idCardImage || member.avatar;
 
   return (
     <div
@@ -87,9 +86,24 @@ export default function MemberCard({ member, viewMode = 'standard' }: Props) {
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
     >
-      {/* Photo – official ID card image for students, circular for faculty */}
+      {/* Photo – official ID card image when available, fallback to circular badge if not */}
       <Link to={`/member/${member.slug}`} className="member-card-photo-box" style={{ textDecoration: 'none' }}>
-        {isFaculty ? (
+        {member.idCardImage ? (
+          /* Use official ID card PNG (exact design from PDF) */
+          <div className="student-portrait-container">
+            <img
+              className="member-card-idcard-img"
+              src={member.idCardImage}
+              alt={`${member.name} GFG PHCET ID Card`}
+              loading="eager"
+              decoding="async"
+              onError={(e) => {
+                (e.target as HTMLImageElement).src =
+                  `https://ui-avatars.com/api/?name=${encodeURIComponent(member.name)}&background=00b386&color=fff&size=500`;
+              }}
+            />
+          </div>
+        ) : isFaculty ? (
           <div className="faculty-badge-frame">
             <img
               className="faculty-card-img"
@@ -102,17 +116,12 @@ export default function MemberCard({ member, viewMode = 'standard' }: Props) {
                   `https://ui-avatars.com/api/?name=${encodeURIComponent(member.name)}&background=00b386&color=fff&size=500`;
               }}
             />
-            <div className="faculty-pillar-tag">
-              <ShieldCheck size={12} />
-              <span>FACULTY PILLAR</span>
-            </div>
           </div>
         ) : (
-          /* Use official ID card PNG (exact design from PDF) */
           <div className="student-portrait-container">
             <img
               className="member-card-idcard-img"
-              src={photoSrc}
+              src={cardImage}
               alt={`${member.name} GFG PHCET ID Card`}
               loading="eager"
               decoding="async"
@@ -124,8 +133,8 @@ export default function MemberCard({ member, viewMode = 'standard' }: Props) {
           </div>
         )}
 
-        {/* Domain Badge – shown only for faculty or fallback cards without embedded ID graphics */}
-        {(isFaculty || !member.idCardImage) && (
+        {/* Domain Badge – shown only on fallback cards without embedded ID graphics */}
+        {!member.idCardImage && (
           <div className="member-card-badge">
             <span className="badge-dot" style={{ background: member.coverColor || '#00df82' }} />
             <span>{member.domain}</span>
@@ -137,34 +146,60 @@ export default function MemberCard({ member, viewMode = 'standard' }: Props) {
       <div className="member-card-content">
         <Link to={`/member/${member.slug}`} style={{ textDecoration: 'none' }}>
           <h3 className="member-card-name">{member.name}</h3>
-          <div className="member-card-role">{member.position}</div>
+          <div className="member-card-role">{member.title || member.position}</div>
         </Link>
 
         <div className="member-card-handles">
           <div className="card-social-group">
-            {member.linkedin && (
-              <a href={member.linkedin} target="_blank" rel="noopener noreferrer"
-                className="handle-btn linkedin" title="LinkedIn"
-                onClick={(e) => e.stopPropagation()}>
-                <LinkedInIcon size={14} />
-              </a>
-            )}
-            {member.github && (
-              <a href={member.github} target="_blank" rel="noopener noreferrer"
-                className="handle-btn github" title="GitHub"
-                onClick={(e) => e.stopPropagation()}>
+            <a
+              href={member.linkedin || ''}
+              target={member.linkedin ? "_blank" : undefined}
+              rel="noopener noreferrer"
+              className={`handle-btn linkedin${!member.linkedin ? ' disabled-link' : ''}`}
+              title={member.linkedin ? "LinkedIn" : "LinkedIn not provided"}
+              onClick={(e) => {
+                if (!member.linkedin) e.preventDefault();
+                e.stopPropagation();
+              }}
+            >
+              <LinkedInIcon size={14} />
+            </a>
+            {!isFaculty && (
+              <a
+                href={member.github || ''}
+                target={member.github ? "_blank" : undefined}
+                rel="noopener noreferrer"
+                className={`handle-btn github${!member.github ? ' disabled-link' : ''}`}
+                title={member.github ? "GitHub" : "GitHub not provided"}
+                onClick={(e) => {
+                  if (!member.github) e.preventDefault();
+                  e.stopPropagation();
+                }}
+              >
                 <GithubIcon size={14} />
               </a>
             )}
-            {member.instagram && (
-              <a href={member.instagram} target="_blank" rel="noopener noreferrer"
-                className="handle-btn instagram" title="Instagram"
-                onClick={(e) => e.stopPropagation()}>
+            {!isFaculty && member.instagram && (
+              <a
+                href={member.instagram || ''}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="handle-btn instagram"
+                title="Instagram"
+                onClick={(e) => e.stopPropagation()}
+              >
                 <InstagramIcon size={14} />
               </a>
             )}
-            <a href={`mailto:${emailAddress}`} className="handle-btn email"
-              title={`Email ${member.name}`} onClick={(e) => e.stopPropagation()}>
+            <a
+              href={emailAddress ? `mailto:${emailAddress}` : ''}
+              className={`handle-btn email${!emailAddress ? ' disabled-link' : ''}`}
+              title={emailAddress ? `Email ${member.name}` : 'Email not provided'}
+              onClick={(e) => {
+                if (!emailAddress) e.preventDefault();
+                e.stopPropagation();
+              }}
+            >
               <MailIcon size={14} />
             </a>
           </div>

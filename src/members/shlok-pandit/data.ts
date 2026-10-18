@@ -3,13 +3,13 @@ import type { Member } from '../../types/member';
 export const memberData: Member = {
   "id": "8",
   "slug": "shlok-pandit",
-  "name": "Shlok Sachin Pandit",
+  "name": "Shlok Pandit",
   "role": "student",
   "title": "PR & Outreach Head",
   "department": "Computer Engineering",
   "year": "TE",
   "domain": "Public Relations",
-  "position": "Head",
+  "position": "PR & Outreach Head",
   "bio": "PR Head building corporate alliances, guest speaker sessions, and external community outreach.",
   "skills": [
     "Corporate Outreach",

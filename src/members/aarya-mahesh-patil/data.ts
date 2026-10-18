@@ -3,13 +3,13 @@ import type { Member } from '../../types/member';
 export const memberData: Member = {
   "id": "17",
   "slug": "aarya-mahesh-patil",
-  "name": "Aarya Mahesh Patil",
+  "name": "Aarya Patil",
   "role": "student",
   "title": "Social Media Member",
   "department": "Computer Engineering",
   "year": "TE",
   "domain": "Social Media & Promotion",
-  "position": "Member",
+  "position": "Social Media Member",
   "bio": "Social Media Member producing promotional video clips and managing cross-channel engagement.",
   "skills": [
     "Video Production",

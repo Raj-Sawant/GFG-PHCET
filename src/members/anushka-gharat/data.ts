@@ -9,7 +9,7 @@ export const memberData: Member = {
   "department": "Computer Engineering",
   "year": "SE",
   "domain": "Social Media & Promotion",
-  "position": "Member",
+  "position": "Social Media Member",
   "bio": "Social Media Member bringing second-year creative energy to digital marketing and photo shoots.",
   "skills": [
     "Digital Storytelling",
@@ -22,11 +22,12 @@ export const memberData: Member = {
     "Designed 10+ Promotional Posts",
     "Active Workshop Facilitator"
   ],
-  "linkedin": "https://linkedin.com/",
-  "github": "https://github.com/",
+  "linkedin": "",
+  "github": "",
   "instagram": "https://instagram.com/gfg_phcet",
   "avatar": "/assets/members/anushka-gharat.png",
   "idCardImage": "/assets/id-cards/anushka-gharat.png",
-  "coverColor": "#2ecc71"
+  "coverColor": "#2ecc71",
+  "email": ""
 };
 export default memberData;
