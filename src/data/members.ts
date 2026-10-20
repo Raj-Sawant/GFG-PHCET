@@ -55,7 +55,7 @@ export const members: Member[] = [
       "Mentored 100+ Students in CP",
       "Organized National Tech Events"
     ],
-    "email": "kashmira.dalvi@phcet.ac.in",
+    "email": "kashmiradalvi80@gmail.com",
     "linkedin": "https://www.linkedin.com/in/kashmira-dalvi-462629250?utm_source=share_via&utm_content=profile&utm_medium=member_android",
     "github": "",
     "instagram": "",
@@ -115,7 +115,7 @@ export const members: Member[] = [
       "Campus-wide Coding Drives",
       "College Newsletter Feature"
     ],
-    "linkedin": "https://www.linkedin.com/in/sharwari-shinde",
+    "linkedin": "https://www.linkedin.com/in/sharwari-shinde-157511369?utm_source=share_via&utm_content=profile&utm_medium=member_android",
     "github": "https://github.com/iamsharwari",
     "instagram": "https://instagram.com/gfg_phcet",
     "avatar": "/assets/members/sharwari-shinde.png",
@@ -211,7 +211,7 @@ export const members: Member[] = [
     "avatar": "/assets/members/ramola-lade.png",
     "idCardImage": "/assets/id-cards/ramola-lade.png",
     "coverColor": "#e67e22",
-    "email": ""
+    "email": "ramolalade@gmail.com"
   },
   {
     "id": "8",
@@ -271,7 +271,7 @@ export const members: Member[] = [
     "avatar": "/assets/members/tejas-patil.png",
     "idCardImage": "/assets/id-cards/tejas-patil.png",
     "coverColor": "#1abc9c",
-    "email": ""
+    "email": "tejaclicks7145@gmail.com"
   },
   {
     "id": "10",
@@ -541,7 +541,7 @@ export const members: Member[] = [
     "avatar": "/assets/members/vedant-patil.png",
     "idCardImage": "/assets/id-cards/vedant-patil.png",
     "coverColor": "#1abc9c",
-    "email": ""
+    "email": "vedantmp24hcompe@student.mes.ac.in"
   },
   {
     "id": "19",

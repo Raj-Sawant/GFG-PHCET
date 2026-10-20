@@ -165,31 +165,34 @@ export default function MemberCard({ member, viewMode = 'standard' }: Props) {
               <LinkedInIcon size={14} />
             </a>
             {!isFaculty && (
-              <a
-                href={member.github || ''}
-                target={member.github ? "_blank" : undefined}
-                rel="noopener noreferrer"
-                className={`handle-btn github${!member.github ? ' disabled-link' : ''}`}
-                title={member.github ? "GitHub" : "GitHub not provided"}
-                onClick={(e) => {
-                  if (!member.github) e.preventDefault();
-                  e.stopPropagation();
-                }}
-              >
-                <GithubIcon size={14} />
-              </a>
-            )}
-            {!isFaculty && member.instagram && (
-              <a
-                href={member.instagram || ''}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="handle-btn instagram"
-                title="Instagram"
-                onClick={(e) => e.stopPropagation()}
-              >
-                <InstagramIcon size={14} />
-              </a>
+              <>
+                <a
+                  href={member.github || ''}
+                  target={member.github ? "_blank" : undefined}
+                  rel="noopener noreferrer"
+                  className={`handle-btn github${!member.github ? ' disabled-link' : ''}`}
+                  title={member.github ? "GitHub" : "GitHub not provided"}
+                  onClick={(e) => {
+                    if (!member.github) e.preventDefault();
+                    e.stopPropagation();
+                  }}
+                >
+                  <GithubIcon size={14} />
+                </a>
+                <a
+                  href={member.instagram || ''}
+                  target={member.instagram ? "_blank" : undefined}
+                  rel="noopener noreferrer"
+                  className={`handle-btn instagram${!member.instagram ? ' disabled-link' : ''}`}
+                  title={member.instagram ? "Instagram" : "Instagram not provided"}
+                  onClick={(e) => {
+                    if (!member.instagram) e.preventDefault();
+                    e.stopPropagation();
+                  }}
+                >
+                  <InstagramIcon size={14} />
+                </a>
+              </>
             )}
             <a
               href={emailAddress ? `mailto:${emailAddress}` : ''}

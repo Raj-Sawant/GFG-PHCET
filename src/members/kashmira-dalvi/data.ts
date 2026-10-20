@@ -23,7 +23,7 @@ export const memberData: Member = {
     "Mentored 100+ Students in CP",
     "Organized National Tech Events"
   ],
-  "email": "kashmira.dalvi@phcet.ac.in",
+  "email": "kashmiradalvi80@gmail.com",
   "linkedin": "https://www.linkedin.com/in/kashmira-dalvi-462629250?utm_source=share_via&utm_content=profile&utm_medium=member_android",
   "github": "",
   "instagram": "",

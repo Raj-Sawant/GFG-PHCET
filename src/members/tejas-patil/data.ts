@@ -28,6 +28,6 @@ export const memberData: Member = {
   "avatar": "/assets/members/tejas-patil.png",
   "idCardImage": "/assets/id-cards/tejas-patil.png",
   "coverColor": "#1abc9c",
-  "email": ""
+  "email": "tejaclicks7145@gmail.com"
 };
 export default memberData;

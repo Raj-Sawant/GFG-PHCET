@@ -22,7 +22,7 @@ export const memberData: Member = {
     "Campus-wide Coding Drives",
     "College Newsletter Feature"
   ],
-  "linkedin": "https://www.linkedin.com/in/sharwari-shinde",
+  "linkedin": "https://www.linkedin.com/in/sharwari-shinde-157511369?utm_source=share_via&utm_content=profile&utm_medium=member_android",
   "github": "https://github.com/iamsharwari",
   "instagram": "https://instagram.com/gfg_phcet",
   "avatar": "/assets/members/sharwari-shinde.png",

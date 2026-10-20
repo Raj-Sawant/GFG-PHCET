@@ -28,6 +28,6 @@ export const memberData: Member = {
   "avatar": "/assets/members/ramola-lade.png",
   "idCardImage": "/assets/id-cards/ramola-lade.png",
   "coverColor": "#e67e22",
-  "email": ""
+  "email": "ramolalade@gmail.com"
 };
 export default memberData;

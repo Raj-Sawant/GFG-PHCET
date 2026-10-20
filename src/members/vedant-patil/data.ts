@@ -28,6 +28,6 @@ export const memberData: Member = {
   "avatar": "/assets/members/vedant-patil.png",
   "idCardImage": "/assets/id-cards/vedant-patil.png",
   "coverColor": "#1abc9c",
-  "email": ""
+  "email": "vedantmp24hcompe@student.mes.ac.in"
 };
 export default memberData;

@@ -184,35 +184,41 @@ export default function MemberProfileLayout({
                 <span>LinkedIn</span>
                 {member.linkedin && <ExternalLink size={12} className="link-ext-icon" />}
               </a>
+
               {!isFaculty && (
-                <a
-                  href={member.github || ''}
-                  target={member.github ? "_blank" : undefined}
-                  rel="noopener noreferrer"
-                  className={`big-link-btn github${!member.github ? ' disabled' : ''}`}
-                  title={member.github ? "GitHub Profile" : "GitHub not provided"}
-                  onClick={(e) => {
-                    if (!member.github) e.preventDefault();
-                  }}
-                >
-                  <GithubIcon size={18} />
-                  <span>GitHub</span>
-                  {member.github && <ExternalLink size={12} className="link-ext-icon" />}
-                </a>
+                <>
+                  <a
+                    href={member.github || ''}
+                    target={member.github ? "_blank" : undefined}
+                    rel="noopener noreferrer"
+                    className={`big-link-btn github${!member.github ? ' disabled' : ''}`}
+                    title={member.github ? "GitHub Profile" : "GitHub not provided"}
+                    onClick={(e) => {
+                      if (!member.github) e.preventDefault();
+                    }}
+                  >
+                    <GithubIcon size={18} />
+                    <span>GitHub</span>
+                    {member.github && <ExternalLink size={12} className="link-ext-icon" />}
+                  </a>
+
+                  <a
+                    href={member.instagram || ''}
+                    target={member.instagram ? "_blank" : undefined}
+                    rel="noopener noreferrer"
+                    className={`big-link-btn instagram${!member.instagram ? ' disabled' : ''}`}
+                    title={member.instagram ? "Instagram Profile" : "Instagram not provided"}
+                    onClick={(e) => {
+                      if (!member.instagram) e.preventDefault();
+                    }}
+                  >
+                    <InstagramIcon size={18} />
+                    <span>Instagram</span>
+                    {member.instagram && <ExternalLink size={12} className="link-ext-icon" />}
+                  </a>
+                </>
               )}
-              {!isFaculty && member.instagram && (
-                <a
-                  href={member.instagram || ''}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="big-link-btn instagram"
-                  title="Instagram Profile"
-                >
-                  <InstagramIcon size={18} />
-                  <span>Instagram</span>
-                  <ExternalLink size={12} className="link-ext-icon" />
-                </a>
-              )}
+
               <a
                 href={emailAddress ? `mailto:${emailAddress}` : ''}
                 className={`big-link-btn email${!emailAddress ? ' disabled' : ''}`}
@@ -248,12 +254,10 @@ export default function MemberProfileLayout({
                 <span className="profile-meta-label">Department</span>
                 <span className="profile-meta-val">{member.department}</span>
               </div>
-              {!isFaculty && (
-                <div className="profile-meta-row">
-                  <span className="profile-meta-label">Tenure Period</span>
-                  <span className="profile-meta-val highlight">2026&ndash;2027</span>
-                </div>
-              )}
+              <div className="profile-meta-row">
+                <span className="profile-meta-label">Tenure Period</span>
+                <span className="profile-meta-val highlight">2026&ndash;2027</span>
+              </div>
               <div className="profile-meta-row full-width">
                 <span className="profile-meta-label">Institution</span>
                 <span className="profile-meta-val">

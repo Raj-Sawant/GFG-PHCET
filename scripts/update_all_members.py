@@ -40,7 +40,7 @@ members_list = [
         "bio": "Teacher Incharge steering GFG PHCET, bridging classroom academics with industry technical standards.",
         "skills": ["Mentorship", "Chapter Coordination", "Industry Connect", "Tech Guidance"],
         "achievements": ["Established GFG Chapter at PHCET", "Mentored 100+ Students in CP", "Organized National Tech Events"],
-        "email": "kashmira.dalvi@phcet.ac.in",
+        "email": "kashmiradalvi80@gmail.com",
         "linkedin": "https://linkedin.com/",
         "github": "https://github.com/",
         "instagram": "https://instagram.com/gfg_phcet",
