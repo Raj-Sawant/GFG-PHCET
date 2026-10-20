@@ -149,19 +149,6 @@ export default function MemberProfileLayout({
               />
             )}
           </div>
-
-          {/* Centered QR Button inside card: only QR SVG icon, no text */}
-          <div className="profile-card-qr-row">
-            <button
-              type="button"
-              onClick={() => setIsQrOpen(true)}
-              className="profile-card-qr-btn"
-              title={`Scan or Share QR for ${member.name}`}
-              aria-label="Scan or Share QR Code"
-            >
-              <QrIcon size={20} />
-            </button>
-          </div>
         </div>
 
         {/* Right Side: Links, Chapter Details, and QR inside profile */}
@@ -269,7 +256,20 @@ export default function MemberProfileLayout({
         </div>
       </div>
 
-      {/* QR Code Modal (accessible when linking to the card) */}
+      {/* QR Button – centered below the card */}
+      <div className="profile-below-card-qr">
+        <button
+          type="button"
+          onClick={() => setIsQrOpen(true)}
+          className="profile-card-qr-btn"
+          title={`Scan or Share QR for ${member.name}`}
+          aria-label="Scan or Share QR Code"
+        >
+          <QrIcon size={20} />
+        </button>
+      </div>
+
+      {/* QR Code Modal */}
       <QrCodeModal
         isOpen={isQrOpen}
         onClose={() => setIsQrOpen(false)}

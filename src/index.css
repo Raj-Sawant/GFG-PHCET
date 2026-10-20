@@ -2104,9 +2104,9 @@ img {
    MEMBER PROFILE DOSSIER PAGE (EXACT REQUESTED FORMAT & ALIGNMENT)
 ───────────────────────────────────────────────────────────── */
 .profile-wrapper {
-  max-width: 1000px;
+  max-width: 1380px;
   margin: 0 auto;
-  padding: 6.5rem 1.5rem 5rem 1.5rem;
+  padding: 6.5rem 2rem 5rem 2rem;
 }
 
 /* Minimal 3-Dots Smooth Loading Transition */
@@ -2200,13 +2200,13 @@ img {
   background: rgba(8, 14, 10, 0.85);
   border: 1px solid var(--border-card);
   border-radius: var(--radius-xl);
-  padding: 2.75rem 3rem;
-  max-width: 1120px;
-  width: 100%;
+  padding: 2.75rem 3.5rem;
+  max-width: 1300px;
+  width: calc(100% - 4rem);
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 450px 1fr;
-  gap: 3rem;
+  grid-template-columns: 420px 1fr;
+  gap: 3.5rem;
   align-items: start;
   backdrop-filter: blur(20px);
   box-shadow:
@@ -2281,7 +2281,7 @@ img {
 .profile-photo-stage {
   position: relative;
   width: 100%;
-  max-width: 450px;
+  max-width: 400px;
   margin: 0 auto;
   background-color: #000000;
   background-image: none;
@@ -2342,13 +2342,24 @@ img {
   box-shadow: 0 12px 24px rgba(0, 0, 0, 0.6);
 }
 
-/* Centered QR Button Inside Member Profile Card */
+/* QR button is now inline beside the Institution row in the right panel */
+/* .profile-card-qr-row is no longer used on desktop */
 .profile-card-qr-row {
+  display: none;
+}
+
+/* QR button centered below the entire card */
+.profile-below-card-qr {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
-  margin-top: 1.25rem;
+  margin-top: 1.5rem;
+}
+
+/* Institution row – restored to full-width plain row */
+.profile-institution-qr-row {
+  display: contents;
 }
 
 .profile-card-qr-btn {
