@@ -2913,10 +2913,12 @@ img {
   .profile-card-container {
     grid-template-columns: 1fr;
     padding: 2rem 1.5rem;
+    width: 100%;
+    max-width: 100%;
   }
 
   .profile-left-column {
-    max-width: 460px;
+    max-width: 100%;
     margin: 0 auto;
     width: 100%;
     align-items: center;
@@ -3087,7 +3089,8 @@ img {
   }
 
   .profile-wrapper {
-    padding: 5.5rem 1.25rem 3.5rem 1.25rem;
+    padding: 5.5rem 0.85rem 3.5rem 0.85rem;
+    max-width: 100%;
   }
 
   .profile-top-bar {
@@ -3099,10 +3102,22 @@ img {
     margin-bottom: 1.25rem;
   }
 
+  .profile-card-container {
+    width: 100%;
+    max-width: 100%;
+    padding: 1.75rem 1.25rem;
+    border-radius: var(--radius-lg);
+  }
+
+  .profile-left-column {
+    max-width: 100%;
+    width: 100%;
+  }
+
   .profile-photo-stage {
     min-height: auto;
     width: 100%;
-    max-width: 360px;
+    max-width: 420px;
     padding: 0 !important;
     background-color: #000000;
     margin: 0 auto;
@@ -3274,12 +3289,15 @@ img {
   }
 
   .profile-card-container {
-    padding: 1.5rem 1rem;
+    padding: 1.35rem 0.85rem;
     border-radius: var(--radius-lg);
+    width: 100%;
+    max-width: 100%;
   }
 
   .profile-photo-stage {
-    max-width: 320px;
+    max-width: 100%;
+    width: 100%;
     padding: 0 !important;
     background-color: #000000;
     display: flex;
@@ -3350,8 +3368,15 @@ img {
     object-fit: contain;
   }
 
+  .profile-card-container {
+    padding: 1.25rem 0.65rem;
+    width: 100%;
+    max-width: 100%;
+  }
+
   .profile-photo-stage {
-    max-width: 280px;
+    max-width: 100%;
+    width: 100%;
     padding: 0 !important;
     background-color: #000000;
     display: flex;
@@ -3434,10 +3459,16 @@ img {
 @media (max-width: 768px) {
   .team-controls-section,
   .team-grid-section,
-  .team-page-wrapper,
-  .profile-wrapper {
+  .team-page-wrapper {
     padding-left: 1rem;
     padding-right: 1rem;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  .profile-wrapper {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
     max-width: 100%;
     overflow-x: hidden;
   }
@@ -3465,10 +3496,16 @@ img {
 @media (max-width: 480px) {
   .team-controls-section,
   .team-grid-section,
-  .team-page-wrapper,
-  .profile-wrapper {
+  .team-page-wrapper {
     padding-left: 0.75rem;
     padding-right: 0.75rem;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  .profile-wrapper {
+    padding-left: 0.45rem;
+    padding-right: 0.45rem;
     max-width: 100%;
     overflow-x: hidden;
   }
