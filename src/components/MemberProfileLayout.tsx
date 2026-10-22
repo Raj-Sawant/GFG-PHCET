@@ -241,10 +241,12 @@ export default function MemberProfileLayout({
                 <span className="profile-meta-label">Department</span>
                 <span className="profile-meta-val">{member.department}</span>
               </div>
-              <div className="profile-meta-row">
-                <span className="profile-meta-label">Tenure Period</span>
-                <span className="profile-meta-val highlight">2026&ndash;2027</span>
-              </div>
+              {!isFaculty && (
+                <div className="profile-meta-row">
+                  <span className="profile-meta-label">Tenure Period</span>
+                  <span className="profile-meta-val highlight">2026&ndash;2027</span>
+                </div>
+              )}
               <div className="profile-meta-row full-width">
                 <span className="profile-meta-label">Institution</span>
                 <span className="profile-meta-val">
